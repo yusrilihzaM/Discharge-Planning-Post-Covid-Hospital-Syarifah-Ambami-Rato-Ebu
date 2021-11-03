@@ -36,7 +36,7 @@
 
     <main id="main">
 
-        <section id="deteksi" class="contact mt-4" style="background-color:white;">
+        <section id="deteksi" class="contact mt-3" style="background-color:white;">
             <div class="container-fluid">
 
                 <div class="section-title">
@@ -69,7 +69,7 @@
         <!-- End Featured Services Section -->
 
         <!-- ======= Tentang ======= -->
-        <section id="about" class="about">
+        <section id="about" class="about pt-3">
             <div class="container">
 
                 <div class="row">
