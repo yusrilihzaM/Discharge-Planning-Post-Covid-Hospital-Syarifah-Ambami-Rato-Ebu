@@ -2,7 +2,7 @@
     <div class="footer-left">
         Copyright &copy; 2021 <div class="bullet"></div> RSUD Syarifah Ambami Rato Ebu Bangkalan</a>
     </div>
- 
+
 </footer>
 </div>
 </div>
