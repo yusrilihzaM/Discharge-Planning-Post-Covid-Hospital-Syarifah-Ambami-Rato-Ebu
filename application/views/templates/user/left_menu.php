@@ -10,7 +10,7 @@
                         <li class="menu-header">Beranda</li>
                         <li class="nav-item ">
                             <a href="#" class="nav-link "><i
-                                    class="fas fa-home"></i><span>Beranda Pasien</span></a>
+                                    class="fas fa-home"></i><span><?=$title;?></span></a>
                             
                         </li>
                         <li class="menu-header">Pengaturan</li>
