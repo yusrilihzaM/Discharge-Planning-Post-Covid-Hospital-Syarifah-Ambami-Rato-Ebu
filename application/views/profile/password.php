@@ -74,7 +74,6 @@
                                 </div>
                                 <div class="card-footer bg-whitesmoke text-md-right">
                                     <button type="submit" class="btn btn-primary" id="save-btn">Simpan Perubahan</button>
-                                 
                                 </div>
                             </div>
                     </form>
