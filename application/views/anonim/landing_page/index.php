@@ -10,7 +10,7 @@
                     <div class="d-flex"></div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                    <img src="assets/img/gambar.png" class="img-fluid animated" alt="">
+                    <img src="<?= base_url() ?>assets/img/gambar.png" class="img-fluid animated" alt="">
                 </div>
             </div>
 
@@ -58,7 +58,7 @@
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <img src="assets/img/rumahsakit.jpg" class="img-fluid" alt="">
+                        <img src="<?= base_url() ?>assets/img/rumahsakit.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content">
                         <h3>Tentang RSUD Syarifah Ambami Rato Ebu</h3>
@@ -280,18 +280,18 @@
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="assets/vendor/counterup/counterup.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/php-email-form/validate.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/counterup/counterup.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/venobox/venobox.min.js"></script>
+    <script src="<?= base_url() ?>assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="<?= base_url() ?>assets/js/main.js"></script>
 
       <!-- General JS Scripts -->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -304,9 +304,9 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="<?= base_url() ?>assets_user/js/stisla.js"></script>
-    <script src="<?= base_url() ?>assets_user/js/scripts.js"></script>
-    <script src="<?= base_url() ?>assets_user/js/custom.js"></script>
+    <script src="<?= base_url() ?><?= base_url() ?>assets_user/js/stisla.js"></script>
+    <script src="<?= base_url() ?><?= base_url() ?>assets_user/js/scripts.js"></script>
+    <script src="<?= base_url() ?><?= base_url() ?>assets_user/js/custom.js"></script>
     </body>
 
     </html>
