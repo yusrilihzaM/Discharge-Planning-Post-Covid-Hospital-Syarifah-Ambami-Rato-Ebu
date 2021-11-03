@@ -8,12 +8,13 @@
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                <li class="active"><a href="index.html">Beranda</a></li>
+                <li class="active"><a href="#hero">Beranda</a></li>
+                <li><a href="#deteksi">Deteksi Mandiri</a></li>
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#services">Layanan</a></li>
                 <li><a href="#contact">Kontak</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
-            <a href="#about" class="btn btn-outline-success ml-4">Masuk</a>
+            <a href="<?= base_url() ?>Auth"class="btn btn-outline-success ml-4">Masuk</a>
         </div>
     </header><!-- End Header -->
