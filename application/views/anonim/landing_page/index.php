@@ -1,252 +1,263 @@
     <!-- ======= Hero Section ======= -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+<link rel="stylesheet" href="<?= base_url() ?>assets_user/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets_user/css/components.css">
     <section id="hero" class="d-flex align-items-center">
 
         <div class="container">
-        <div class="row">
-            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1>SELAMAT DATANG</h1>
-            <h2 class="mb-3">Di Sistem Informasi Discharge Planning</h2>
-            <h5>RSUD SYARIFAH AMBAMI RATO EBU BANGKALAN</h5>
-            <div class="d-flex"></div>
+            <div class="row">
+                <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h1>SELAMAT DATANG</h1>
+                    <h2 class="mb-3">Di Sistem Informasi Discharge Planning</h2>
+                    <h5>RSUD SYARIFAH AMBAMI RATO EBU BANGKALAN</h5>
+                    <div class="d-flex"></div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                    <img src="assets/img/gambar.png" class="img-fluid animated" alt="">
+                </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img">
-            <img src="assets/img/gambar.png" class="img-fluid animated" alt="">
-            </div>
-        </div>
+
         </div>
 
     </section><!-- End Hero -->
 
     <main id="main">
 
-        <!-- ======= Featured Services Section ======= -->
-        <section id="featured-services" class="featured-services">
-        <div class="container">
-            <div class="mx-auto" style="width: 600px;">
-                <div class="icon-box">
-                    <h4 class="title"><a href="">Deteksi Mandiri</a></h4>
-                    <p class="description">Isi NIK untuk memulai deteksi mandiri</p>
+        <section id="contact" class="contact mt-4" style="background-color:white;">
+            <div class="container-fluid">
 
-                    <form>
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <label for="exampleInputnik" class="form-label">NIK</label>
-                                <input type="text" class="form-control" id="exampleInpunik" name="exampleInpunik" placeholder="Masukkan NIK">
-                            </div>
-                            <div class="row">
-                            <div class="col-lg-3 ml-3">
-                                <button type="submit" class="btn btn-success">Periksa</button>
-                            </div>
-                        </div>
-                        </div>
-                        
-                        
-                    </form>
+                <div class="section-title">
+                    <span>Deteksi Mandiri</span>
+                    <h2>Deteksi Mandiri</h2>
+
                 </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10 ">
+                        <form >
+                            <div class="form-group row  d-flex justify-content-center" >
+                                <div class="col-sm-5">
+                                    NIK
+                                    <input type="text" class="form-control p-4 mx-auto" id="NIK" placeholder="Masukan NIK">
+                                </div>
+                                <div class="col-sm-3 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary mt-4" style="height: 60%;">Mulai Deteksi Mandiri</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
-        </div>
-        </section>
+        </section><!-- End Kontak -->
         <!-- End Featured Services Section -->
 
         <!-- ======= Tentang ======= -->
         <section id="about" class="about">
-        <div class="container">
+            <div class="container">
 
-            <div class="row">
-            <div class="col-lg-6">
-                <img src="assets/img/rumahsakit.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Tentang RSUD Syarifah Ambami Rato Ebu</h3>
-                <p class="font-italic">
-                RSUD Syarifah Ambami Rato Ebu Bangkalan merupakan
-                salah satu rumah sakit yang memberikan Discharge Planning bagi pasien rawat inap.RSUD Syam Rabu berusaha memberikan pelayanan kesehatan secara
-                profesionalisme dan meningkatkan mutu terus-menerus. Sehingga memaksa pihak
-                RSUD Syam Rabu untuk selalu memperbaiki kinerjanya, agar dapat menambah
-                kepercayaan masyarakat. Kepercayaan ini sangatlah penting, mengingat
-                masyarakat merupakan pengguna jasanya. Diharapkan dengan peningkatan
-                kepercayaan masyarakat terhadap RSUD Syam Rabu mempunyai dampak pada
-                Visi RSUD Syam Rabu, yaitu menjadi rumah sakit sentra rujukan sepulau
-                madura. Untuk mencapai visi tersebut RSUD Syam Rabu menetapkan Misi
-                RSUD Syam Rabu sebagai berikut : Meningkatkan pelayanan kesehatan yang
-                paripurna, bermutu dan profesional pada seluruh lapisan masyarakat.
-                Meningkatkan cakupan dan jangkauan pelayanan kesehatan. Meningkatkan
-                pelayanan administrasi dan manajemen rumah sakit.
-                </p>
-            </div>
-            </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="assets/img/rumahsakit.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content">
+                        <h3>Tentang RSUD Syarifah Ambami Rato Ebu</h3>
+                        <p class="font-italic">
+                            RSUD Syarifah Ambami Rato Ebu Bangkalan merupakan
+                            salah satu rumah sakit yang memberikan Discharge Planning bagi pasien rawat inap.RSUD Syam
+                            Rabu berusaha memberikan pelayanan kesehatan secara
+                            profesionalisme dan meningkatkan mutu terus-menerus. Sehingga memaksa pihak
+                            RSUD Syam Rabu untuk selalu memperbaiki kinerjanya, agar dapat menambah
+                            kepercayaan masyarakat. Kepercayaan ini sangatlah penting, mengingat
+                            masyarakat merupakan pengguna jasanya. Diharapkan dengan peningkatan
+                            kepercayaan masyarakat terhadap RSUD Syam Rabu mempunyai dampak pada
+                            Visi RSUD Syam Rabu, yaitu menjadi rumah sakit sentra rujukan sepulau
+                            madura. Untuk mencapai visi tersebut RSUD Syam Rabu menetapkan Misi
+                            RSUD Syam Rabu sebagai berikut : Meningkatkan pelayanan kesehatan yang
+                            paripurna, bermutu dan profesional pada seluruh lapisan masyarakat.
+                            Meningkatkan cakupan dan jangkauan pelayanan kesehatan. Meningkatkan
+                            pelayanan administrasi dan manajemen rumah sakit.
+                        </p>
+                    </div>
+                </div>
 
-        </div>
+            </div>
         </section>
         <!-- End Tentang -->
 
         <!-- ======= Layanan Medis======= -->
         <section id="services" class="services section-bg">
-        <div class="container">
+            <div class="container">
 
-            <div class="section-title">
-            <span>Layanan Medis</span>
-            <h2>Layanan Medis</h2>
-            <p>Layanan Fasilitas Medis yang ada pada RSUD Syarifah Ambami Rato Ebu</p>
-            </div>
-        
-            <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-ambulance-cross"></i></div>
-                <h4><a href="">Ambulan</a></h4>
-                <p>Ambulan merupakan alat transportasi medis di RSUD Syamrabu Bangkalan</p>
+                <div class="section-title">
+                    <span>Layanan Medis</span>
+                    <h2>Layanan Medis</h2>
+                    <p>Layanan Fasilitas Medis yang ada pada RSUD Syarifah Ambami Rato Ebu</p>
                 </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-first-aid"></i></i></div>
-                <h4><a href="">Apotek</a></h4>
-                <p>RSUD Syamrabu bangkalan juga menyediakan Apotek sebagai tempat untuk menebus resep obat dari dokter</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-ambulance-cross"></i></div>
+                            <h4><a href="">Ambulan</a></h4>
+                            <p>Ambulan merupakan alat transportasi medis di RSUD Syamrabu Bangkalan</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-first-aid"></i></i></div>
+                            <h4><a href="">Apotek</a></h4>
+                            <p>RSUD Syamrabu bangkalan juga menyediakan Apotek sebagai tempat untuk menebus resep obat
+                                dari dokter</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-dna"></i></i></div>
+                            <h4><a href="">Radiologi</a></h4>
+                            <p>RSUD Syamrabu juga menyediakan ruangan radiologi untuk pasien</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-laboratory"></i></i></i></div>
+                            <h4><a href="">Laboratorium</a></h4>
+                            <p>RSUD Syamrabu menyediakan ruangan laboratorium</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-patient-bed"></i></i></div>
+                            <h4><a href="">Ruang UGD</a></h4>
+                            <p>Ruang Unit Gawat Darurat juga tersedia bagi pasien yang membutuhkan perawatan khusus</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-hospital"></i></i></div>
+                            <h4><a href="">Rawat Inap</a></h4>
+                            <p>Ruang Rawat Inap tersedia untuk pasien melakukan opname</p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-dna"></i></i></div>
-                <h4><a href="">Radiologi</a></h4>
-                <p>RSUD Syamrabu juga menyediakan ruangan radiologi untuk pasien</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-laboratory"></i></i></i></div>
-                <h4><a href="">Laboratorium</a></h4>
-                <p>RSUD Syamrabu menyediakan ruangan laboratorium</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-patient-bed"></i></i></div>
-                <h4><a href="">Ruang UGD</a></h4>
-                <p>Ruang Unit Gawat Darurat juga tersedia bagi pasien yang membutuhkan perawatan khusus</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-hospital"></i></i></div>
-                <h4><a href="">Rawat Inap</a></h4>
-                <p>Ruang Rawat Inap tersedia untuk pasien melakukan opname</p>
-                </div>
-            </div>
 
             </div>
-
-        </div>
         </section><!-- End Layanan Medis -->
 
         <!-- ======= Layanan Umum======= -->
         <section id="services" class="services section-bg">
-        <div class="container">
-        
-            <div class="section-title">
-            <span>Layanan Umum</span>
-            <h2>Layanan Umum</h2>
-            <p>Layanan Fasilitas Umum yang ada pada RSUD Syarifah Ambami Rato Ebu</p>
-            </div>
-        
-            <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-bank-transfer"></i></div>
-                <h4><a href="">Bank/ATM</a></h4>
-                <p>Tersedia ATM Center di area RSUD Syamrabu Bangkalan</p>
+            <div class="container">
+
+                <div class="section-title">
+                    <span>Layanan Umum</span>
+                    <h2>Layanan Umum</h2>
+                    <p>Layanan Fasilitas Umum yang ada pada RSUD Syarifah Ambami Rato Ebu</p>
                 </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-bed"></i></div>
-                <h4><a href="">Ruang Tunggu</a></h4>
-                <p>Tersedia ruang tunggu untuk keluarga pasien</p>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-bank-transfer"></i></div>
+                            <h4><a href="">Bank/ATM</a></h4>
+                            <p>Tersedia ATM Center di area RSUD Syamrabu Bangkalan</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-bed"></i></div>
+                            <h4><a href="">Ruang Tunggu</a></h4>
+                            <p>Tersedia ruang tunggu untuk keluarga pasien</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-lunch"></i></div>
+                            <h4><a href="">Kafe/Kantin</a></h4>
+                            <p>RSUD Syamrabu juga menyediakan kantin umum bagi pasien beserta keluara maupun untuk
+                                pengunjung umum RSUD Syamrabu</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-bicycle"></i></div>
+                            <h4><a href="">Parkir</a></h4>
+                            <p>Tersedia tempat parkir luas bagi sepeda motor dan mobil</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="icofont-wall-clock"></i></div>
+                            <h4><a href="">Layanan 24 Jam</a></h4>
+                            <p>Unit Pelayanan 24 juga tersedia bagi pasien</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-arch"></i></div>
+                            <h4><a href="">Musholla</a></h4>
+                            <p>RSUD Syamrabu Bangkalan juga menyediakan tempat ibadah bagi pengunjung umum maupun pasien
+                                RSUD</p>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
-        
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-lunch"></i></div>
-                <h4><a href="">Kafe/Kantin</a></h4>
-                <p>RSUD Syamrabu juga menyediakan kantin umum bagi pasien beserta keluara maupun untuk pengunjung umum RSUD Syamrabu</p>
-                </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-bicycle"></i></div>
-                <h4><a href="">Parkir</a></h4>
-                <p>Tersedia tempat parkir luas bagi sepeda motor dan mobil</p>
-                </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box">
-                <div class="icon"><i class="icofont-wall-clock"></i></div>
-                <h4><a href="">Layanan 24 Jam</a></h4>
-                <p>Unit Pelayanan 24 juga tersedia bagi pasien</p>
-                </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box">
-                <div class="icon"><i class="bx bx-arch"></i></div>
-                <h4><a href="">Musholla</a></h4>
-                <p>RSUD Syamrabu Bangkalan juga menyediakan tempat ibadah bagi pengunjung umum maupun pasien RSUD</p>
-                </div>
-            </div>
-        
-            </div>
-        
-        </div>
         </section><!-- End Layanan Umum -->
-        
+
         <!-- ======= Kontak ======= -->
         <section id="contact" class="contact">
-        <div class="container">
+            <div class="container">
 
-            <div class="section-title">
-            <span>Kontak</span>
-            <h2>Kontak</h2>
-            <p>Hubungi Kami</p>
+                <div class="section-title">
+                    <span>Kontak</span>
+                    <h2>Kontak</h2>
+                    <p>Hubungi Kami</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-5 d-flex align-items-stretch">
+                        <div class="info">
+                            <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <h4>Lokasi:</h4>
+                                <p>Jl. Pemuda Kaffa No.9, Junok, Pejagan, Kec. Bangkalan, Kabupaten Bangkalan, Jawa
+                                    Timur 69112</p>
+                            </div>
+
+                            <div class="time">
+                                <i class="icofont-wall-clock"></i>
+                                <h4>Waktu:</h4>
+                                <p>Jam Operasional 24 Jam</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="icofont-phone"></i>
+                                <h4>Telepon:</h4>
+                                <p>021-80625508 (Panggilan Darurat)</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-
-            <div class="row">
-
-            <div class="col-lg-5 d-flex align-items-stretch">
-                <div class="info">
-                <div class="address">
-                    <i class="icofont-google-map"></i>
-                    <h4>Lokasi:</h4>
-                    <p>Jl. Pemuda Kaffa No.9, Junok, Pejagan, Kec. Bangkalan, Kabupaten Bangkalan, Jawa Timur 69112</p>
-                </div>
-
-                <div class="time">
-                    <i class="icofont-wall-clock"></i>
-                    <h4>Waktu:</h4>
-                    <p>Jam Operasional 24 Jam</p>
-                </div>
-
-                <div class="phone">
-                    <i class="icofont-phone"></i>
-                    <h4>Telepon:</h4>
-                    <p>021-80625508 (Panggilan Darurat)</p>
-                </div>
-
-                </div>
-
-            </div>
-
-            </div>
-
-        </div>
         </section><!-- End Kontak -->
 
     </main><!-- End #main -->
@@ -255,16 +266,16 @@
     <footer id="footer">
 
         <div class="container footer-bottom clearfix">
-        <div class="copyright">
-            &copy; Copyright <strong><span>RSUD Syarifah Ambami Rato Ebu Bangkalan 2021</span></strong>
-        </div>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/enno-free-simple-bootstrap-template/ -->
-            Designed by <a href="https://zahrohsite.wordpress.com/">@rzahrohk</a>
-        </div>
+            <div class="copyright">
+                &copy; Copyright <strong><span>RSUD Syarifah Ambami Rato Ebu Bangkalan 2021</span></strong>
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/enno-free-simple-bootstrap-template/ -->
+                Designed by <a href="https://zahrohsite.wordpress.com/">@rzahrohk</a>
+            </div>
         </div>
     </footer><!-- End Footer -->
 
