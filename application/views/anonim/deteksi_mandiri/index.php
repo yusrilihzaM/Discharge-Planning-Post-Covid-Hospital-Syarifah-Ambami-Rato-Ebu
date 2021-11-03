@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <!-- <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
@@ -37,7 +37,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <label for="gejala hipertensi" ><h4>Tanda dan Gejala :<span class="label label-default"></span></h4></label>
+            
             <div class="card">
                 <div class="card-body">
                     <div class="row">
@@ -53,17 +55,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            Tanda dan Gejala DM :
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+<!-- 
+            <label for="gejala hipertensi" ><h4>Tanda dan Gejala DM :<span class="label label-default"></span></h4></label>
+            
             <div class="card">
                 <div class="card-body">
                     <div class="row">
@@ -78,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <button type="submit" class="btn btn-danger btn-lg btn-block">
                 <h6>Cek Status</h6>
