@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Doktor extends CI_Controller {
+class Dokter extends CI_Controller {
 
     public function __construct()
     {
@@ -12,7 +12,7 @@ class Doktor extends CI_Controller {
 
     public function index()
     {
-        $data['title'] = 'Beranda Doktor';
+        $data['title'] = 'Beranda Dokter';
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
         $this->load->view('templates/user/left_menu', $data); 	
