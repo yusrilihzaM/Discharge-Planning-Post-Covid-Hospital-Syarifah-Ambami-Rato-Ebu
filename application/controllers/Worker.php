@@ -64,10 +64,23 @@ class Worker extends CI_Controller {
 
     public function logout() // tugasnya mengembalikan login
     {
-        $this->session->unset_userdata('id_user');
-        $this->session->unset_userdata('role_id');
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Kamu telah keluar</div>');
-        redirect('worker');
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        if($season_user){
+            $this->session->unset_userdata('id_user');
+            $this->session->unset_userdata('role_id');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Kamu telah keluar</div>');
+            redirect('worker');
+        }
+        else
+        if($season_patient){
+            $this->session->unset_userdata('id_patient');
+            $this->session->unset_userdata('role_id');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Kamu telah keluar</div>');
+            redirect('auth');
+        }
+
+
     }
 }

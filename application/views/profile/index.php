@@ -8,9 +8,7 @@
 
         <div class="section-body">
 
-            <p class="section-lead">
-                Anda dapat menyesuaikan semua pengaturan umum di sini
-            </p>
+           
 
             <div id="output-status"></div>
             <div class="row">
@@ -18,11 +16,16 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col">
-                                    aaa
+                                <div class="col-auto">
+                                    <figure class="avatar mr-2 avatar-lg">
+                                        <img src="<?= base_url() ?>assets_user/img/avatar/avatar-1.png" alt="...">
+                                    </figure>
                                 </div>
-                                <div class="col">
-                                    aaa
+                                <div class="col-auto">
+                                    <h5  style="font-weight: bold;color:black;">
+                                        <?=$name?>
+                                    </h5>
+                                        Jenis Akun: <?=$role?>
                                 </div>
                             </div>
                         </div>
@@ -40,63 +43,54 @@
                     <form id="setting-form">
                         <div class="card" id="settings-card">
                             <div class="card-header">
-                                <h4>General Settings</h4>
+                                <h4>Profil</h4>
                             </div>
                             <div class="card-body">
-                                <p class="text-muted">General settings such as, site title, site description, address
-                                    and so on.</p>
+                                <p class="text-muted">Data pribadi</p>
                                 <div class="form-group row align-items-center">
-                                    <label for="site-title" class="form-control-label col-sm-3 text-md-right">Site
-                                        Title</label>
+                                    <label for="site-title" class="form-control-label col-sm-3 text-md-right">Nama</label>
                                     <div class="col-sm-6 col-md-9">
-                                        <input type="text" name="site_title" class="form-control" id="site-title">
+                                        <input type="text" disabled name="name" class="form-control" id="site-title" placeholder="<?=$name?>">
                                     </div>
                                 </div>
                                 <div class="form-group row align-items-center">
-                                    <label for="site-description" class="form-control-label col-sm-3 text-md-right">Site
-                                        Description</label>
+                                    <label for="umur" class="form-control-label col-sm-3 text-md-right">Umur</label>
                                     <div class="col-sm-6 col-md-9">
-                                        <textarea class="form-control" name="site_description"
-                                            id="site-description"></textarea>
+                                        <input type="text" disabled name="name" class="form-control" id="umur" placeholder="<?=$age?>">
                                     </div>
                                 </div>
                                 <div class="form-group row align-items-center">
-                                    <label class="form-control-label col-sm-3 text-md-right">Site Logo</label>
+                                    <label for="provinsi" class="form-control-label col-sm-3 text-md-right">Provinsi</label>
                                     <div class="col-sm-6 col-md-9">
-                                        <div class="custom-file">
-                                            <input type="file" name="site_logo" class="custom-file-input"
-                                                id="site-logo">
-                                            <label class="custom-file-label">Choose File</label>
-                                        </div>
-                                        <div class="form-text text-muted">The image must have a maximum size of 1MB
-                                        </div>
+                                        <input type="text" disabled name="name" class="form-control" id="provinsi" placeholder="<?=$provinsi?>">
                                     </div>
                                 </div>
                                 <div class="form-group row align-items-center">
-                                    <label class="form-control-label col-sm-3 text-md-right">Favicon</label>
+                                    <label for="KOta/Kabupaten" class="form-control-label col-sm-3 text-md-right">Kota/Kabupaten</label>
                                     <div class="col-sm-6 col-md-9">
-                                        <div class="custom-file">
-                                            <input type="file" name="site_favicon" class="custom-file-input"
-                                                id="site-favicon">
-                                            <label class="custom-file-label">Choose File</label>
-                                        </div>
-                                        <div class="form-text text-muted">The image must have a maximum size of 1MB
-                                        </div>
+                                        <input type="text" disabled name="name" class="form-control" id="KOta/Kabupaten" placeholder="<?=$kota?>">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="form-control-label col-sm-3 mt-3 text-md-right">Google Analytics
-                                        Code</label>
+                                <div class="form-group row align-items-center">
+                                    <label for="Kecamatan" class="form-control-label col-sm-3 text-md-right">Kecamatan</label>
                                     <div class="col-sm-6 col-md-9">
-                                        <textarea class="form-control codeeditor"
-                                            name="google_analytics_code"></textarea>
+                                        <input type="text" disabled name="name" class="form-control" id="Kecamatan" placeholder="<?=$kecamatan?>">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card-footer bg-whitesmoke text-md-right">
-                                <button class="btn btn-primary" id="save-btn">Save Changes</button>
-                                <button class="btn btn-secondary" type="button">Reset</button>
-                            </div>
+                                <div class="form-group row align-items-center">
+                                    <label for="Kelurahan" class="form-control-label col-sm-3 text-md-right">Kelurahan</label>
+                                    <div class="col-sm-6 col-md-9">
+                                        <input type="text" disabled name="name" class="form-control" id="Kelurahan" placeholder="<?=$kelurahan?>">
+                                    </div>
+                                </div>
+                                <div class="form-group row align-items-center">
+                                    <label for="site-description" class="form-control-label col-sm-3 text-md-right">Alamat</label>
+                                    <div class="col-sm-6 col-md-9">
+                                        <textarea class="form-control" disabled name="site_description"
+                                            id="site-description"><?=$address?></textarea>
+                                    </div>
+                                </div>
+                               
                         </div>
                     </form>
                 </div>
