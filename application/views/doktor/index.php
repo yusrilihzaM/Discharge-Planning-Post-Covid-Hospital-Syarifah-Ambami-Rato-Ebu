@@ -15,7 +15,7 @@
     <section class="section">
     <div class="section-header">
             <h1><?=$title;?></h1>
-          </div>
+        </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">

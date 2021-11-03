@@ -3,7 +3,7 @@
             <h3 class="mb-3 mt-5">Deteksi Mandiri COVID-19</h3>
         </div>
         <div class="d-flex justify-content-center">
-            <img src="assets/img/rslogo.png" alt="" class="align-items-sm-center" width="100" height="125">
+            <img src="<?= base_url('assets/img/rslogo.png'); ?>" alt="" class="align-items-sm-center" width="100" height="125">
         </div>
         <div>
             <h6 class="d-flex justify-content-center mb-2 mt-2 ">Deteksi Mandiri Cepat COVID-19 adalah salah satu cara
@@ -73,9 +73,8 @@
                     </div>
                 </div>
             </div> -->
-
-            <button type="submit" class="btn btn-danger btn-lg btn-block">
+            <a href="<?= base_url('Deteksimandiri/hasil')?>" type="submit" class="btn btn-danger btn-lg btn-block">
                 <h6>Cek Status</h6>
-            </button>
+            </a>
         </form>
     </div>

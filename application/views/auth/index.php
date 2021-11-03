@@ -38,7 +38,7 @@
                                 <input id="nik" type="text" class="form-control" name="nik" tabindex="1" required
                                     autofocus>
                                 <div class="invalid-feedback">
-                                    Silakan isi NIK anda
+                                    Silahkan isi NIK anda
                                 </div>
                             </div>
 
