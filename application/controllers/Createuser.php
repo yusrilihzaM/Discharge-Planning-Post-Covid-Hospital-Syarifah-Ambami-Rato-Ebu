@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admins extends CI_Controller {
+class Createuser extends CI_Controller {
 
     public function __construct()
     {
@@ -14,7 +14,7 @@ class Admins extends CI_Controller {
     {
 
         $data['user'] = $this->db->get_where('m_user', ['id_user' => $this->session->userdata('id_user')])->row_array();
-      
+
         $data['title'] = 'Beranda Admin';
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	

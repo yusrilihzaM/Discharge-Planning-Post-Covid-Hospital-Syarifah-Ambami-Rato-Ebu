@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Worker extends CI_Controller {
 
     public function __construct()
     {
@@ -13,31 +13,39 @@ class Auth extends CI_Controller {
     public function index()
 	{
 
-        $this->form_validation->set_rules('nik', 'nik', 'trim|required');
+        $this->form_validation->set_rules('username', 'username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
         if ($this->form_validation->run() == false) {
-        $data['nama'] = "Masuk";
-		$this->load->view('auth/index.php', $data);
+        $data['nama'] = "Masuk Pekerja";
+		$this->load->view('auth/worker.php', $data);
         }
         else{
-            $nik=$this->input->post('nik');
+            $username=$this->input->post('username');
             $password=$this->input->post('password');
 
-            $user=$this->db->get_where('m_patient', ['nik_patient' => $nik])->row_array();
-
+            $user=$this->db->get_where('m_user', ['username' => $username])->row_array();
             // jika usernya ada 
         if ($user) {
             // jika usernya aktif
             if ($user['is_active'] == 1) {
                 // cek pasword
-                if (password_verify($password, $user['password_patient'])) {
+                if (password_verify($password, $user['password'])) {
                     $data = [
-                        'id_patient' => $user['id_patient'],
+                        'id_user' => $user['id_user'],
                         'role_id' => $user['role_id'] // menentukan menu
                     ];
                     $this->session->set_userdata($data);
-                    if ($user['role_id'] == 5) {
-                        redirect('pasien');
+                    if ($user['role_id'] == 1) {
+                        redirect('admins');
+                    } else
+                    if ($user['role_id'] == 2) {
+                        redirect('dokter');
+                    } else
+                    if ($user['role_id'] == 3) {
+                        redirect('nutrisionis');
+                    } else
+                    if ($user['role_id'] == 4) {
+                        redirect('nurse');
                     } 
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah</div>');
@@ -56,10 +64,10 @@ class Auth extends CI_Controller {
 
     public function logout() // tugasnya mengembalikan login
     {
-        $this->session->unset_userdata('id_patient');
+        $this->session->unset_userdata('id_user');
         $this->session->unset_userdata('role_id');
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Kamu telah keluar</div>');
-        redirect('auth');
+        redirect('worker');
     }
 }

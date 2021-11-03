@@ -30,7 +30,9 @@
                             class="shadow-light mb-5 mt-2">
                         <h4 class="text-dark font-weight-normal">Masuk </h4>
                         <p class="text-muted">Sebelum memulai, Anda harus masuk.</p>
-                        <form method="POST" action="#" class="needs-validation" novalidate="">
+
+                        <?= $this->session->flashdata('message'); ?>
+                        <form method="POST" action="<?= base_url('auth'); ?>" class="needs-validation" novalidate="">
                             <div class="form-group">
                                 <label for="nik">NIK</label>
                                 <input id="nik" type="text" class="form-control" name="nik" tabindex="1" required
