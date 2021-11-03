@@ -33,8 +33,8 @@
                     <div class="card">
                         <div class="card-body">
                             <ul class="nav nav-pills flex-column">
-                                <li class="nav-item"><a href="<?= base_url() ?>" class="nav-link active">Profil</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Ganti kata sandi</a></li>
+                                <li class="nav-item"><a href="<?= base_url() ?>profil" class="nav-link active">Profil</a></li>
+                                <li class="nav-item"><a href="<?= base_url() ?>profil/password" class="nav-link">Ganti kata sandi</a></li>
                             </ul>
                         </div>
                     </div>

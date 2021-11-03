@@ -47,4 +47,33 @@ class Profil extends CI_Controller {
         $this->load->view('profile/index', $data); 
         $this->load->view('templates/user/footer', $data); 	
     }
+
+
+
+    public function password()
+	{
+        $data['title'] = 'Beranda Pasien';
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['password'] = $data['user']["password"];
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join rolewhere id_patient=$season_patient")->row_array();
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['password'] = $data['user']["password"];
+        }
+        // var_dump( $data['name']);
+        // die;
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('profile/password', $data); 
+        $this->load->view('templates/user/footer', $data); 	
+	}
 }
