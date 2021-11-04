@@ -40,7 +40,7 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>assets_user/css/style.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets_user/css/components.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
 </head>
 
 <body>

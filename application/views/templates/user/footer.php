@@ -8,6 +8,7 @@
 </div>
 
 <!-- General JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -42,7 +43,7 @@
 
 <!-- Sweet alert init js-->
 <script src="<?= base_url(); ?>assets_user/js/page/sweet-alerts.init.js"></script>
-<script src="<?= base_url() ?>assets_user/js/myscript.js"></script>
+<script src="<?= base_url(); ?>assets_user/js/myscript.js"></script>
 
 <!-- Required datatable js -->
 <script src="<?= base_url(); ?>assets_user/libs/datatables.net/js/jquery.dataTables.min.js"></script>
