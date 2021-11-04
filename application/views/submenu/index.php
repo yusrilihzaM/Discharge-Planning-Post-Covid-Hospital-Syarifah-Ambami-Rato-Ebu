@@ -49,8 +49,8 @@
                                     <td><?= $data['icon']; ?></td>
                                     <td><?= $data['is_active']; ?></td>
                                     <td style="width: 15%;">
-                                        <a class="btn btn-warning  fas fa-edit" href="" style=" color:white;"></a>
-                                        <a class="btn btn-danger fas fa-trash-alt hapus-news" href=""
+                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url(); ?>submenu/edit/<?= $data['id_user_sub_menu']; ?>" style=" color:white;"></a>
+                                        <a class="btn btn-danger fas fa-trash-alt hapus-news" href="<?= base_url(); ?>submenu/hapus/<?= $data['id_user_sub_menu']; ?>"
                                             style="color:white;"></a>
                                     </td>
 
