@@ -68,8 +68,11 @@ class Menu extends CI_Controller {
         $this->load->view('menu/add_menu', $data); 
         $this->load->view('templates/user/footer', $data); 	
     } else {
-        $this->db->insert('user_menu', ['menu' => $this->input->post('menu')]);
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Menu baru berhasil di tambahkan</div>');
+        $menu=$this->input->post('menu');
+        $this->db->insert('user_menu', ['menu' =>$menu]);
+        $this->session->set_flashdata('flash', 'Ditambahkan');
+		$this->session->set_flashdata('data', 'Kecamatan');
+    
         redirect('menu');
     }
 
@@ -103,12 +106,13 @@ class Menu extends CI_Controller {
     } else {
         $id_user_menu=$this->input->post('id_user_menu',true);
         $menu=$this->input->post('menu',true);
+    
         $this->db->set('menu',$menu);    
         $this->db->where('id_user_menu',$id_user_menu);
         $this->db->update('user_menu');
         $this->session->set_flashdata('flash', 'Di Perbarui');
         $this->session->set_flashdata('data', 'Menu');
-        redirect('dataset');
+        redirect('menu');
     }
 
     }
