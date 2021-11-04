@@ -11,12 +11,31 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="<?= base_url() ?>node_modules/jqvmap/dist/jqvmap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>node_modules/summernote/dist/summernote-bs4.css">
     <link rel="stylesheet" href="<?= base_url() ?>node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>node_modules/bootstrap-social/bootstrap-social.css">
+
+    <link href="<?= base_url(); ?>assets_user/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link href="<?= base_url() ?>assets_user/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="<?= base_url() ?>assets_user/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- Responsive datatable examples -->
+    <link href="<?= base_url() ?>assets_user/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+        rel="stylesheet" type="text/css" />
+
+    <!-- datepicker -->
+    <link href="<?= base_url() ?>assets_user/libs/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?=base_url()?>assets_user/libs/chartist/chartist.min.css" rel="stylesheet">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>assets_user/css/style.css">

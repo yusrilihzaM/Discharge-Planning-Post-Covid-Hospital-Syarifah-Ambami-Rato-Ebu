@@ -35,6 +35,38 @@
 <!-- Page Specific JS File -->
 <script src="<?= base_url() ?>assets_user/js/page/index.js"></script>
 <script src="<?= base_url() ?>assets_user/js/page/bootstrap-modal.js"></script>
+
+
+
+<script src="<?= base_url(); ?>assets_user/libs/sweetalert2/sweetalert2.min.js"></script>
+
+<!-- Sweet alert init js-->
+<script src="<?= base_url(); ?>assets_user/js/page/sweet-alerts.init.js"></script>
+<script src="<?= base_url() ?>assets_user/js/myscript.js"></script>
+
+<!-- Required datatable js -->
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Responsive examples -->
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+<script src="<?= base_url(); ?>assets_user/libs/jszip/jszip.min.js"></script>
+
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="<?= base_url(); ?>assets_user/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+<!-- Datatable init js -->
+<script src="<?= base_url(); ?>assets_user/js/page/datatables.init.js"></script>
+
+<!-- datepicker -->
+<script src="<?= base_url(); ?>assets_user/libs/air-datepicker/js/datepicker.min.js"></script>
+<script src="<?= base_url(); ?>assets_user/libs/air-datepicker/js/i18n/datepicker.en.js"></script>
+<!-- Page Specific JS File -->
+<script src="<?= base_url() ?>assets_user/js/page/index.js"></script>
 </body>
 
 </html>

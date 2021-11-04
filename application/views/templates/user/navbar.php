@@ -21,7 +21,7 @@
                         <div class="dropdown-menu dropdown-menu-right">
                         
                             <a href="<?= base_url('profil'); ?>" class="dropdown-item has-icon">
-                                <i class="far fa-user"></i> Profil
+                                <i class="far fa-user"></i> Akun
                             </a>
                             
                             <div class="dropdown-divider"></div>

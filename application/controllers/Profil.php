@@ -13,7 +13,7 @@ class Profil extends CI_Controller {
     public function index()
     {
         ini_set('memory_limit', '-1');
-        $data['title'] = 'Beranda Dokter';
+        $data['title'] = 'Profil';
         $season_user=$this->session->userdata('id_user');
         $season_patient=$this->session->userdata('id_patient');
         if($season_user){
@@ -53,7 +53,7 @@ class Profil extends CI_Controller {
 
     public function password()
 	{
-        $data['title'] = 'Beranda Pasien';
+        $data['title'] = 'Profil';
         $season_user=$this->session->userdata('id_user');
         $season_patient=$this->session->userdata('id_patient');
         if($season_user){
