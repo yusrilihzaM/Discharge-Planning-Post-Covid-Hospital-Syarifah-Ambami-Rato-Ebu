@@ -18,11 +18,7 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-<<<<<<< HEAD
                 <div class="card card-statistic-1" li >
-=======
-                <div class="card card-statistic-1" data-bs-toggle="modal" type="submit" data-bs-target="#kontrolModal">
->>>>>>> 33bf301895594769d34bcccc616c145f8bfad6c4
                     <div class="card-icon bg-primary">
                         <i class="fas fa-stethoscope"></i>
                     </div>
