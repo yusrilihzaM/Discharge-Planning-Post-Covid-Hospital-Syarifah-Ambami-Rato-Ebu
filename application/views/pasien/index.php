@@ -18,40 +18,44 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" li>
+                <div class="card card-statistic-1" data-bs-toggle="modal" type="submit" data-bs-target="#kontrolModal">
                     <div class="card-icon bg-primary">
                         <i class="fas fa-stethoscope"></i>
                     </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <a href="" type="button" data-bs-toggle="modal" data-bs-target="#kontrolModal"><h4 mx-auto w-100>Kontrol</h4></a>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100>Kontrol</h4>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                    
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
+                <div class="card card-statistic-1" type="submit">
                     <div class="card-icon bg-danger">
                         <i class="fas fa-walking"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <a href="<?= base_url('Aktivitaspasien'); ?>" type="button" data-bs-toggle="modal" data-bs-target="#aktivitasModal"><h4 mx-auto w-100>Aktivitas</h4></a>
+                            <h4 mx-auto w-100>Aktivitas</h4>
                         </div>
                         <div class="card-body">
-
+                            <a href="<?=base_url('Aktivitas');?>"></a>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                    <div class="card-icon bg-warning">
+                <div class="card card-statistic-1" type="submit">
+                    <div class="card-icon bg-warning" >
                         <i class="fas fa-capsules"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <a href="" type="button" data-bs-toggle="modal" data-bs-target="#obatModal"><h4 mx-auto w-100>Obat</h4></a>
+                            <h4 mx-auto w-100>Obat</h4></a>
                         </div>
                         <div class="card-body">
 
@@ -59,14 +63,15 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
+                <div class="card card-statistic-1" type="submit">
                     <div class="card-icon bg-success">
                         <i class="fas fa-utensils"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <a href="" type="button" data-bs-toggle="modal" data-bs-target="#menudietModal"><h4 mx-auto w-100>Menu Diet</h4></a>
+                            <h4 mx-auto w-100>Menu Diet</h4></a>
                         </div>
                         <div class="card-body">
 
