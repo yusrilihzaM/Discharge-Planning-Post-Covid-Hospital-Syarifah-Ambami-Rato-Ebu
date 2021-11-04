@@ -18,7 +18,7 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" li >
+                <div class="card card-statistic-1" data-toggle="modal" data-target="kontrolModal" type="submit">
                     <div class="card-icon bg-primary">
                         <i class="fas fa-stethoscope"></i>
                     </div>
@@ -88,15 +88,17 @@
 <div class="modal fade" id="kontrolModal" tabindex="-1" aria-labelledby="kontrolModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header"> 
                 <h5 class="modal-title" id="kontrolModalLabel">Jadwal Kontrol Anda</h5>
             </div>
                 <div class="modal-body">
                     Hai pasien, Jadwal kontrol anda pada hari Senin, 8 September 2021. Pukul 13.00 WIB
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Simpan</button>
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Keluar</button>
+                    <div class="modal-footer" style="justify-content: center;">
+                        <button type="button" class="btn btn-success mr-5" data-bs-dismiss="modal">Simpan</button>
+                        <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button>
+                    </div>
                 </div>
             </div>
         </div>
