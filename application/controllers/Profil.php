@@ -29,18 +29,19 @@ class Profil extends CI_Controller {
             $data['kelurahan'] = $this->db->query("Select * FROM m_user natural join role  natural join m_kelurahan where id_user=$season_user")->row_array()['kelurahan'];
         }
         elseif($season_patient){
-            $data['user'] = $this->db->query("Select * FROM m_user natural join rolewhere id_patient=$season_patient")->row_array();
-            $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
             $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
             $data['role'] = $data['user']["role"];
-            $data['age'] = $data['user']["age"];
-            $data['address'] = $data['user']["address"];
-            $data['provinsi'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi  where id_user=$season_user")->row_array()['provinsi'];
-            $data['kota'] = $this->db->query("Select * FROM m_patient natural join role natural join  m_kab_kota  where id_user=$season_user")->row_array()['kabupaten_kota'];
-            $data['kecamatan'] = $this->db->query("Select * FROM m_patient natural join role  natural join m_kecamatan where id_user=$season_user")->row_array()['kecamatan'];
-            $data['kelurahan'] = $this->db->query("Select * FROM m_patient natural join role  natural join m_kelurahan where id_user=$season_user")->row_array()['kelurahan'];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+            $data['provinsi'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi  where id_patient=$season_patient")->row_array()['provinsi'];
+            $data['kota'] = $this->db->query("Select * FROM m_patient natural join role natural join  m_kab_kota  where id_patient=$season_patient")->row_array()['kabupaten_kota'];
+            $data['kecamatan'] = $this->db->query("Select * FROM m_patient natural join role  natural join m_kecamatan where id_patient=$season_patient")->row_array()['kecamatan'];
+            $data['kelurahan'] = $this->db->query("Select * FROM m_patient natural join role  natural join m_kelurahan where id_patient=$season_patient")->row_array()['kelurahan'];
         }
-        
+        // var_dump($data['user']);
+        // die;
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
         $this->load->view('templates/user/left_menu', $data); 	
@@ -62,7 +63,7 @@ class Profil extends CI_Controller {
             $data['password'] = $data['user']["password"];
         }
         elseif($season_patient){
-            $data['user'] = $this->db->query("Select * FROM m_user natural join rolewhere id_patient=$season_patient")->row_array();
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
             $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
             $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
             $data['role'] = $data['user']["role"];

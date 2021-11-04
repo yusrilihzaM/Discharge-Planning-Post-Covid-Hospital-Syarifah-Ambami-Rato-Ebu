@@ -53,7 +53,7 @@
         <!-- End Featured Services Section -->
 
         <!-- ======= Tentang ======= -->
-        <section id="about" class="about pt-3">
+        <section id="about" class="about pt-4">
             <div class="container">
 
                 <div class="row">
@@ -61,7 +61,7 @@
                         <img src="<?= base_url() ?>assets/img/rumahsakit.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 content">
-                        <h3>Tentang RSUD Syarifah Ambami Rato Ebu</h3>
+                        <h3 class="font-bold">Tentang RSUD Syarifah Ambami Rato Ebu</h3>
                         <p class="font-italic">
                             RSUD Syarifah Ambami Rato Ebu Bangkalan merupakan
                             salah satu rumah sakit yang memberikan Discharge Planning bagi pasien rawat inap.RSUD Syam
