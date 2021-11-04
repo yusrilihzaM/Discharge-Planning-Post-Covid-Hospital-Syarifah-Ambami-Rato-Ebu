@@ -15,18 +15,17 @@
     <section class="section">
     <div class="section-header">
             <h1><?=$title;?></h1>
-          </div>
+        </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
+                <div class="card card-statistic-1" li>
                     <div class="card-icon bg-primary">
                         <i class="fas fa-stethoscope"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4 mx-auto w-100>Kontrol</h4>
+                            <a href="" type="button" data-bs-toggle="modal" data-bs-target="#kontrolModal"><h4 mx-auto w-100>Kontrol</h4></a>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -37,7 +36,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Aktivitas</h4>
+                            <a href="<?= base_url('Aktivitaspasien'); ?>" type="button" data-bs-toggle="modal" data-bs-target="#aktivitasModal"><h4 mx-auto w-100>Aktivitas</h4></a>
                         </div>
                         <div class="card-body">
 
@@ -52,7 +51,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Obat</h4>
+                            <a href="" type="button" data-bs-toggle="modal" data-bs-target="#obatModal"><h4 mx-auto w-100>Obat</h4></a>
                         </div>
                         <div class="card-body">
 
@@ -67,7 +66,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Menu Diet</h4>
+                            <a href="" type="button" data-bs-toggle="modal" data-bs-target="#menudietModal"><h4 mx-auto w-100>Menu Diet</h4></a>
                         </div>
                         <div class="card-body">
 
@@ -79,3 +78,24 @@
 
     </section>
 </div>
+
+<!-- Modal Menu Kontrol Pasien-->
+<div class="modal fade" id="kontrolModal" tabindex="-1" aria-labelledby="kontrolModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="kontrolModalLabel">Jadwal Kontrol Anda</h5>
+            </div>
+                <div class="modal-body">
+                    Hai pasien, Jadwal kontrol anda pada hari Senin, 8 September 2021. Pukul 13.00 WIB
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Simpan</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Keluar</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+

@@ -1,6 +1,6 @@
     <div class="container">
         <div class="d-flex justify-content-center">
-            <h3 class="mb-3 mt-5">Deteksi Mandiri COVID-19</h3>
+            <h3 class="mb-3 mt-5">Deteksi Mandiri <span style="color :red">COVID-19</span></h3>
         </div>
         <div class="d-flex justify-content-center">
             <img src="<?= base_url('assets/img/rslogo.png'); ?>" alt="" class="align-items-sm-center" width="100" height="125">
