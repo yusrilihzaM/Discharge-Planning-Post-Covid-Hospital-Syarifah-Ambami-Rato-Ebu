@@ -28,8 +28,9 @@ class Pasien extends CI_Controller {
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
         $this->load->view('templates/user/left_menu', $data); 	
-        $this->load->view('pasien/disclaimer', $data); 
+      
         $this->load->view('pasien/index', $data); 
+        $this->load->view('pasien/disclaimer', $data); 
         $this->load->view('templates/user/footer', $data); 	
 	}
 }
