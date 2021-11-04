@@ -8,8 +8,6 @@
 
         <div class="section-body">
 
-           
-
             <div id="output-status"></div>
             <div class="row">
                 <div class="col-md-4">

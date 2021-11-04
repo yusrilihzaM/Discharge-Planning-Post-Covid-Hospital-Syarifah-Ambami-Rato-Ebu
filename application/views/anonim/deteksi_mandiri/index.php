@@ -29,15 +29,6 @@
                 </div>
             </div>
 
-            <!-- <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            Gejala Hipertensi :
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <label for="gejala hipertensi" ><h4>Tanda dan Gejala :<span class="label label-default"></span></h4></label>
             
             <div class="card">
@@ -55,24 +46,7 @@
                     </div>
                 </div>
             </div>
-<!-- 
-            <label for="gejala hipertensi" ><h4>Tanda dan Gejala DM :<span class="label label-default"></span></h4></label>
-            
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            Sering kencing terutama malam hari
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-check">
-                                <label class="radio-inline mr-3"><input type="radio" name="optradio" checked>Ya</label>
-                                <label class="radio-inline"><input type="radio" name="optradio">Tidak</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+
             <a href="<?= base_url('Deteksimandiri/hasil')?>" type="submit" class="btn btn-danger btn-lg btn-block">
                 <h6>Cek Status</h6>
             </a>
