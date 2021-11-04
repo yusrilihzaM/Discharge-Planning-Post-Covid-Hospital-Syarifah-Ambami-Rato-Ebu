@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Aktivitas extends CI_Controller {
+class Aktivitaspasien extends CI_Controller {
 
     public function __construct()
     {
@@ -27,7 +27,7 @@ class Aktivitas extends CI_Controller {
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
         $this->load->view('templates/user/left_menu', $data); 	
-        $this->load->view('aktivitas/index', $data); 
+        $this->load->view('aktivitaspasien/index', $data); 
         $this->load->view('templates/user/footer', $data); 
     }
 }
