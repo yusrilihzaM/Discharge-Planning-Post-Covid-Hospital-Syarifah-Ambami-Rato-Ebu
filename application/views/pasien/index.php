@@ -21,7 +21,7 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" data-toggle="modal" data-target="kontrolModal">
+                <div class="card card-statistic-1"  type="button" data-bs-toggle="modal" data-bs-target="#kontrolModal">
                     <div class="card-icon bg-primary">
                         <i class="fas fa-stethoscope"></i>
                     </div>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" type="submit">
+                <div class="card card-statistic-1" type="button">
                     <div class="card-icon bg-danger">
                         <i class="fas fa-walking"></i>
                     </div>
@@ -45,14 +45,14 @@
                             <h4 mx-auto w-100>Aktivitas</h4>
                         </div>
                         <div class="card-body">
-                            <a href="<?=base_url('Aktivitas');?>"></a>
+                            <a href=""></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" type="submit">
+                <div class="card card-statistic-1" type="button">
                     <div class="card-icon bg-warning" >
                         <i class="fas fa-capsules"></i>
                     </div>
@@ -68,7 +68,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" type="submit">
+                <div class="card card-statistic-1" type="button">
                     <div class="card-icon bg-success">
                         <i class="fas fa-utensils"></i>
                     </div>
@@ -87,25 +87,24 @@
     </section>
 </div>
 
-<!-- Modal Menu Kontrol Pasien-->
+<!-- Modal -->
 <div class="modal fade" id="kontrolModal" tabindex="-1" aria-labelledby="kontrolModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header"> 
-                <h5 class="modal-title" id="kontrolModalLabel">Jadwal Kontrol Anda</h5>
-            </div>
-                <div class="modal-body">
-                    Hai pasien, Jadwal kontrol anda pada hari Senin, 8 September 2021. Pukul 13.00 WIB
-                </div>
-                <div class="modal-footer">
-                    <div class="modal-footer" style="justify-content: center;">
-                        <button type="button" class="btn btn-success mr-5" data-bs-dismiss="modal">Simpan</button>
-                        <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button>
-                    </div>
-                </div>
-            </div>
+        <div class="modal-header">
+            <h5 class="modal-title" id="kontrolModalLabel">Jadwal Kontrol Anda</h5>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
         </div>
+
+        <div class="modal-body">
+            Hai pasien, Jadwal kontrol anda pada hari Senin, 8 September 2021. Pukul 13.00 WIB
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Simpan</button>
+            <!-- <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button> -->
+        </div>
+        </div>
+    </div>
 </div>
-
-
 
