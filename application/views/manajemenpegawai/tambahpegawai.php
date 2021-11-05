@@ -47,7 +47,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Password</label>
                                 <div class="col-sm-12 col-md-7">
                                     <input type="text" name="password" class="form-control" required autofocus
-                                        tabindex="1" placeholder="Masukkan nama">
+                                        tabindex="1" placeholder="Masukkan password">
                                     <div class="invalid-feedback">
                                         Password tidak boleh kosong!
                                     </div>

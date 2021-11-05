@@ -53,7 +53,7 @@
                                     <td>address</td>
 
                                     <td style="width: 15%;">
-                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url();?>" style=" color:white;"></a>
+                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url('manajemenpegawai/editdatapegawai');?>" style=" color:white;"></a>
                                         <a class="btn btn-danger fas fa-trash-alt hapus-news" href=""
                                             style="color:white;"></a>
                                     </td>
