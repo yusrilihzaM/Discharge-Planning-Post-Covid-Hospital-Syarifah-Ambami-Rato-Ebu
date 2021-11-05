@@ -56,6 +56,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal lahir</label>
                                 <div class="col-sm-12 col-md-7">
@@ -66,6 +67,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Umur</label>
                                 <div class="col-sm-12 col-md-7">
