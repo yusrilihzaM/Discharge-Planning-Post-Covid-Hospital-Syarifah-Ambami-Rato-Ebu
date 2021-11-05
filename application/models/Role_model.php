@@ -23,12 +23,10 @@ class Role_model  extends CI_model
     }
 
     public function update_role(
-        $role_id,
-        $role
-    
+        $data,
+        $role_id
         ){
-            $this->db->set('role',$role);
-            $this->db->where('role_id',$role_id);
-            $this->db->update('role');
+            $this->db->update('role', $data, ['role_id'=>$role_id]);
+            return $this->db->affected_rows();
     }
 }
