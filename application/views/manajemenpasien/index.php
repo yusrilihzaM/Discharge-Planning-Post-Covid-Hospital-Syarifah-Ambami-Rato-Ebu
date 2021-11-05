@@ -24,21 +24,20 @@
                         <br>
                         <br>
 
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                        <table id="datatable" class="table table-responsive table-bordered dt-responsive"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">NIK</th>
-                                    <th scope="col">Tanggal lahir</th>
+                                    <th scope="col">No Rekam Medis</th>
                                     <th scope="col">Umur</th>
                                     <th scope="col">Jenis Kelamin</th>
-                                    <th scope="col">Provinsi</th>
-                                    <th scope="col">Kota</th>
-                                    <th scope="col">Kecamatan</th>
-                                    <th scope="col">Kelurahan</th>
                                     <th scope="col">Alamat</th>
+                                    <th scope="col">Lihat</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Hapus</th>
 
                                 </tr>
                             </thead>
@@ -46,12 +45,16 @@
                             
                                 <tr>
                                     <td style="width: 4%;"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td style="width: 15%;">
+                                    <td>Nama</td>
+                                    <td>NIK</td>
+                                    <td>No Rekam Medis</td>
+                                    <td>Umur</td>
+                                    <td>Jenis Kelamin</td>
+                                    <td>Alamat</td>
+
+                                    <td style="width: 20%;">
+                                        <a class="btn btn-success fas fa-eye" href=""
+                                            style="color:white;"></a>
                                         <a class="btn btn-warning  fas fa-edit" href="" style=" color:white;"></a>
                                         <a class="btn btn-danger fas fa-trash-alt hapus-news" href=""
                                             style="color:white;"></a>
