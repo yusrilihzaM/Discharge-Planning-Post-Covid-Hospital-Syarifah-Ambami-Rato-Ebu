@@ -36,54 +36,58 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" type="button">
-                    <div class="card-icon bg-danger">
-                        <i class="fas fa-walking"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4 mx-auto w-100>Aktivitas</h4>
+                <a href="<?= base_url('aktivitaspasien')?>">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-danger">
+                            <i class="fas fa-walking"></i>
                         </div>
-                        <div class="card-body">
-                            <a href=""></a>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100>Aktivitas</h4>
+                            </div>
+                            <div class="card-body">
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" type="button">
-                    <div class="card-icon bg-warning" >
-                        <i class="fas fa-capsules"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4 mx-auto w-100>Obat</h4></a>
+                <a href="<?= base_url('obatpasien')?>">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-warning">
+                            <i class="fas fa-capsules"></i>
                         </div>
-                        <div class="card-body">
-
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100>Obat</h4>
+                            </div>
+                            <div class="card-body">
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1" type="button">
-                    <div class="card-icon bg-success">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4 mx-auto w-100>Menu Diet</h4></a>
+                <a href="<?= base_url('dietpasien')?>">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-success">
+                            <i class="fas fa-utensils"></i>
                         </div>
-                        <div class="card-body">
-
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100>Menu Diet</h4>
+                            </div>
+                            <div class="card-body">
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </div>
-
     </section>
 </div>
 
