@@ -35,10 +35,7 @@
                                     <th scope="col">Umur</th>
                                     <th scope="col">Jenis Kelamin</th>
                                     <th scope="col">Alamat</th>
-                                    <th scope="col">Lihat</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Hapus</th>
-
+                                    <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
