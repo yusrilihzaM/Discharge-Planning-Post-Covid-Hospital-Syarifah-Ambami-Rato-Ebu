@@ -41,24 +41,27 @@
                             <tbody>
                             
                                 <tr>
-                                    <td style="width: 4%;"></td>
-                                    <td>Nama</td>
-                                    <td>NIK</td>
-                                    <td>No Rekam Medis</td>
-                                    <td>Umur</td>
-                                    <td>Jenis Kelamin</td>
-                                    <td>Alamat</td>
+                                <?php $i = 1;?>
+                                <?php foreach ($data as $m) : ?>
+                                    <td style="width: 4%;"><?= $i; ?></td>
+                                    <td><?= $m['name_patient']; ?></td>
+                                    <td><?= $m['nik_patient']; ?></td>
+                                    <td><?= $m['id_medical_record']; ?></td>
+                                    <td><?= $m['age_patient']; ?></td>
+                                    <td><?= $m['gender_patient']; ?></td>
+                                    <td><?= $m['address_patient']; ?></td>
 
                                     <td style="width: 20%;">
-                                        <a class="btn btn-success fas fa-eye" href=""
+                                        <a class="btn btn-success fas fa-eye" href="<?= base_url('manajemenpasien/detail/')?><?= $m['id_patient']; ?>"
                                             style="color:white;"></a>
-                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url('manajemenpasien/edit')?>" style=" color:white;"></a>
-                                        <a class="btn btn-danger fas fa-trash-alt hapus-news" href=""
+                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url('manajemenpasien/edit/')?><?= $m['id_patient']; ?>" style=" color:white;"></a>
+                                        <a class="btn btn-danger fas fa-trash-alt hapus-news" href="<?= base_url('manajemenpasien/delete/')?><?= $m['id_patient']; ?>"
                                             style="color:white;"></a>
                                     </td>
 
                                 </tr>
-                                
+                                <?php $i++; ?>
+                                <?php endforeach; ?>
 
                             </tbody>
 

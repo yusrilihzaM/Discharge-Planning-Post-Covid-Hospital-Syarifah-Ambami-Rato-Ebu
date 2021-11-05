@@ -19,65 +19,87 @@
                     <div class="flash-data-data" data-flashdata="">
                     </div>
                     <div class="card-header">
-                        <h4>Tambah Data Baru</h4>
+                        <h4>Tambah Data Pasien Baru</h4>
                     </div>
                     <div class="card-body">
-                    <form method="" action="<?=base_url();?>" class="needs-validation" novalidate="">
-
+                        <form method="" action="<?=base_url();?>" class="needs-validation" novalidate="">
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Rekam
+                                    Medis</label>
+                                <div class="col-sm-12 col-md-7">
+                                    <input type="text" name="id_patient" class="form-control" required autofocus
+                                        tabindex="1">
+                                    <div class="invalid-feedback">
+                                        Nomor rekam medis tidak boleh kosong
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
-                                    </label>
+                                </label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
+                                    <input type="text" name="name_patient" class="form-control" required autofocus
+                                        tabindex="1">
                                     <div class="invalid-feedback">
-                                    Silahkan isi nama pasien terlebih dahulu
+                                        Silahkan isi nama pasien terlebih dahulu
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NIK</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
+                                    <input type="text" name="nik_patient" class="form-control" required autofocus
+                                        tabindex="1">
                                     <div class="invalid-feedback">
-                                    NIK tidak boleh kosong
+                                        NIK tidak boleh kosong
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Rekam Medis</label>
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal lahir</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
+                                <input class="form-control" type="date" value="2021-01" id="example-month-input" name="tanggal_covid"  required autofocus>
+                    
                                     <div class="invalid-feedback">
-                                    Nomor rekam medis tidak boleh kosong
+                                    Silahkan isi Tanggal terlebih dahulu
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Umur</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
+                                    <input type="number" name="age_patient" class="form-control" required autofocus
+                                        tabindex="1">
                                     <div class="invalid-feedback">
-                                    Silahkan isi umur anda
+                                        Silahkan isi umur pasien
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Kelamin</label>
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis
+                                    Kelamin</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
+                                    <select class="custom-select" required autofocus>
+                                        <option selected disabled>Pilih jenis kelamin</option>
+                                        <option value="Pria">Pria</option>
+                                        <option value="Wanita">Wanita</option>
+                                    </select>
                                     <div class="invalid-feedback">
-                                    Jenis kelamin tidak boleh kosong
+                                        Jenis kelamin tidak boleh kosong
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Alamat</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
-                                    <div class="invalid-feedback">
-                                    Alamat tidak boleh kosong
+                                    <div class="form-group" required autofocus name="address_patient">
+                                        <label>Textarea</label>
+                                        <textarea class="form-control" style="height: 150px;" cols="10000"></textarea>
                                     </div>
-                                </div> 
+                                    <div class="invalid-feedback">
+                                        Alamat tidak boleh kosong
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="form-group row mb-4">
