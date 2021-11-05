@@ -13,11 +13,13 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
+                    <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>');?>
 
-                        <div class="flash-data-news" data-flashdata="">
+                        <?= $this->session->flashdata('message');?>
+                        <div class="flash-data-news" data-flashdata="<?= $this->session->flashdata('flash') ?>">
 
                         </div>
-                        <div class="flash-data-data" data-flashdata="">
+                        <div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
                         </div>
                         <a href="<?= base_url('manajemenpasien/tambah');?>" type="button p-1 mb-2 "
                             class="btn btn-success far fa-plus mx-auto">Tambah Data Pasien</a>
