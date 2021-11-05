@@ -28,7 +28,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
                                     pasien</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="menu" class="form-control" required autofocus tabindex="1">
+                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
                                     <div class="invalid-feedback">
                                     Silahkan isi nama pasien terlebih dahulu
                                 </div>
