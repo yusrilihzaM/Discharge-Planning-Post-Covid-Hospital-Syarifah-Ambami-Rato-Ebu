@@ -19,21 +19,22 @@
                     <div class="flash-data-data" data-flashdata="">
                     </div>
                     <div class="card-header">
-                        <h4>Tambah Data Baru</h4>
+                        <h4>Edit Data Pasien</h4>
                     </div>
                     <div class="card-body">
-                    <form method="" action="<?=base_url();?>" class="needs-validation" novalidate="">
-
+                    <form method="POST" action="" class="needs-validation" novalidate="">
+                    <input type="text" name="id_user_menu" class="form-control" hidden disable required autofocus tabindex="1" value="">
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
                                     </label>
-                                <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="tambah" class="form-control" required autofocus tabindex="1">
-                                    <div class="invalid-feedback">
-                                    Silahkan isi nama pasien terlebih dahulu
+                                    <div class="col-sm-12 col-md-7">
+                                        <input type="text" name="menu" class="form-control" required autofocus tabindex="1" value="">
+                                        <div class="invalid-feedback">
+                                        Silahkan isi nama menu terlebih dahulu
                                     </div>
                                 </div> 
                             </div>
+
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NIK</label>
                                 <div class="col-sm-12 col-md-7">
@@ -83,7 +84,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                 <div class="col-sm-12 col-md-7">
-                                    <button type="submit" class="btn btn-success">Simpan</button>
+                                    <button type="submit" class="btn btn-success">Simpan perubahan</button>
                                 </div>
                             </div>
                         </form>

@@ -52,7 +52,7 @@
                                     <td style="width: 20%;">
                                         <a class="btn btn-success fas fa-eye" href=""
                                             style="color:white;"></a>
-                                        <a class="btn btn-warning  fas fa-edit" href="" style=" color:white;"></a>
+                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url('manajemenpasien/edit')?>" style=" color:white;"></a>
                                         <a class="btn btn-danger fas fa-trash-alt hapus-news" href=""
                                             style="color:white;"></a>
                                     </td>
