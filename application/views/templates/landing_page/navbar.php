@@ -4,7 +4,7 @@
 
             <!-- <h6 class="logo mr-auto"><a href="index.html">Discharge Planning</a></h6> -->
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="index.html" class="logo mr-auto"><img src="<?= base_url() ?>assets/img/rslogo.png" alt="" class="img-fluid"><small class="ml-3" style="font-size: 60%;">Discharge Planning</small></a>
+            <a href="<?= base_url() ?>" class="logo mr-auto"><img src="<?= base_url() ?>assets/img/rslogo.png" alt="" class="img-fluid"><small class="ml-3" style="font-size: 60%;">Discharge Planning</small></a>
 
             <nav class="nav-menu d-none d-lg-block">
                 <ul>

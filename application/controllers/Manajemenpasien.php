@@ -67,7 +67,7 @@ class Manajemenpasien extends CI_Controller {
             $id_patient=$this->input->post('id_patient',true);
             $name_patient=$this->input->post('name_patient',true);
             $nik_patient=$this->input->post('nik_patient',true);
-            $password_patient=$this->input->post('nik_patient',true);
+            $password_patient=password_hash($this->input->post('nik_patient'), PASSWORD_DEFAULT);
             $date_of_birth_patient=$this->input->post('date_of_birth_patient',true);
             $age_patient=$this->input->post('age_patient',true);
             $gender_patient=$this->input->post('gender_patient',true);
@@ -85,7 +85,8 @@ class Manajemenpasien extends CI_Controller {
                 "age_patient"=>$age_patient,
                 "gender_patient"=>$gender_patient,
                 "address_patient"=>$address_patient,
-                "date_created_patient"=>$date_created_patient
+                "date_created_patient"=>$date_created_patient,
+                "role_id"=>5
             ];
           
             $this->Pasien_model->add_pasien($data);

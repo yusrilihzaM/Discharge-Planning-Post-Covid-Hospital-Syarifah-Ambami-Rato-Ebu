@@ -22,7 +22,7 @@
                         <h4>Edit Pertanyaan Baru</h4>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="<?=base_url()?>Assessmentquestion/add" class="needs-validation"
+                        <form method="POST" action="" class="needs-validation"
                             novalidate="">
                             <input type="text" name="id_assessment_question" class="form-control" hidden disable
                                 required autofocus tabindex="1" value="<?= $data['id_assessment_question']?>">
@@ -50,7 +50,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Pertanyaan</label>
                                 <div class="col-sm-12 col-md-7">
                                     <input type="text" name="assessment_question" class="form-control"
-                                        value="<?= $data['id_assessment_question']?>" placeholder="Masukan  pertanyaan"
+                                        value="<?= $data['assessment_question']?>" placeholder="Masukan  pertanyaan"
                                         required autofocus tabindex="1">
                                     <div class="invalid-feedback">
                                         Silahkan isi pertanyaan terlebih dahulu

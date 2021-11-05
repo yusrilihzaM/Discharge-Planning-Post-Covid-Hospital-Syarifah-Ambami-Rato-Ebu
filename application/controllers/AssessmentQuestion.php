@@ -120,14 +120,14 @@ class AssessmentQuestion extends CI_Controller {
         $weight_yes=$this->input->post('weight_yes');
         $weight_no=$this->input->post('weight_no');
         $data_input=array(
-            'id_assessment_question'=>NULL,
+           
             'id_assessment_type'=>$id_assessment_type,
             'assessment_question'=>$assessment_question,
             'weight_yes'=>$weight_yes,
             'weight_no'=>$weight_no
         );
         $this->AssessmentQuestion_model->update_assessment_question($id_assessment_question,$data_input);
-        $this->session->set_flashdata('flash', 'Di perbarui');
+        $this->session->set_flashdata('flash', 'Diperbarui');
 		$this->session->set_flashdata('data', 'Pertanyaan Deteksi');
     
         redirect('Assessmentquestion');

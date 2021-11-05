@@ -8,12 +8,15 @@ class Deteksimandiri extends CI_Controller {
         parent::__construct();
 
         $this->load->library('form_validation');
-        is_logged_in();
+        $this->load->model('AssessmentType_model');
+        $this->load->model('AssessmentQuestion_model');
     }
 
     public function index()
     {
         $data['title'] = 'Deteksi Mandiri';
+        $data['soal']=$this->AssessmentQuestion_model->get_assessment_all();
+
         $this->load->view('templates/user/header', $data); 	
         $this->load->view('anonim/deteksi_mandiri/index', $data);
         $this->load->view('templates/user/footer', $data); 	

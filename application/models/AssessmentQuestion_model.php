@@ -30,11 +30,9 @@ class AssessmentQuestion_model extends CI_model
 
     public function update_assessment_question(
         $id_assessment_question,
-        $assessment_question
+        $data
     
         ){
-            $this->db->set('assessment_question',$assessment_question);
-            $this->db->where('id_assessment_question',$id_assessment_question);
-            $this->db->update('assessment_question');
+            $this->db->update('assessment_question', $data, ['id_assessment_question'=>$id_assessment_question]);
     }
 }

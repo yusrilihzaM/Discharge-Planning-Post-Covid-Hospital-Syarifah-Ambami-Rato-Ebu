@@ -1,6 +1,5 @@
 const flashDatanews = $('.flash-data-news').data('flashdata');
 const flashDatadata = $('.flash-data-data').data('flashdata');
-
 console.log(flashDatanews);
 if (flashDatanews) {
 
@@ -14,8 +13,6 @@ if (flashDatanews) {
 } else {
     console.log('console gagal');
 }
-
-
 
 // tombol hapus news
 $('.hapus-news').on('click', function(e) {

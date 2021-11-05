@@ -94,7 +94,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Alamat</label>
                                 <div class="col-sm-12 col-md-7">
                                     <div class="form-group"  >
-                                        <label>Textarea</label>
+                                    
                                         <textarea class="form-control"  required autofocus name="address_patient"style="height: 150px;" cols="10000"></textarea>
                                     </div>
                                     <div class="invalid-feedback">
