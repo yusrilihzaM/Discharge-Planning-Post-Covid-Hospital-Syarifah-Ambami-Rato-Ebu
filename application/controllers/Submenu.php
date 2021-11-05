@@ -74,7 +74,7 @@ class Submenu extends CI_Controller {
         $url=$this->input->post('url',true);
         $icon=$this->input->post('icon',true);
         $on=$this->input->post('is_active',true);
-       
+    
         if($on=="on"){
             $is_active=1;
         }else{
@@ -88,8 +88,7 @@ class Submenu extends CI_Controller {
             'icon'=>$icon,
             'is_active'=>$is_active
         );
-            
-           
+
         // echo("$on<br>");
         $this->Submenu_model->add_user_sub_menu($data_input);
         $this->session->set_flashdata('flash', 'Ditambahkan');
@@ -122,8 +121,7 @@ class Submenu extends CI_Controller {
         $this->form_validation->set_rules('is_active', 'is_active', 'trim');
         $data['title'] = 'Edit Menu';
         
-      
-       
+
         $data['data_submenu']=$this->Submenu_model->get_user_sub_menu_byID($id);
         $data['data_menu']=$this->Menu_model->get_user_menu_byID($data['data_submenu']['id_user_menu']);
         
@@ -140,7 +138,7 @@ class Submenu extends CI_Controller {
         $url=$this->input->post('url',true);
         $icon=$this->input->post('icon',true);
         $on=$this->input->post('is_active',true);
-       
+    
         if($on=="on"){
             $is_active=1;
         }else{

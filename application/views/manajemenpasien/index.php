@@ -19,7 +19,7 @@
                         </div>
                         <div class="flash-data-data" data-flashdata="">
                         </div>
-                        <a href="" type="button p-1 mb-2 "
+                        <a href="<?= base_url('tambahdatapasien');?>" type="button p-1 mb-2 "
                             class="btn btn-success far fa-plus mx-auto">Tambah Data Pasien</a>
                         <br>
                         <br>
