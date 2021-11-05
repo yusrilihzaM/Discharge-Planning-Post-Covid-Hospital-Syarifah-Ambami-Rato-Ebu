@@ -1,10 +1,10 @@
 <div class="main-content">
     <section class="section">
-        <div class="flash-data-news" data-flashdata="">
+    <div class="flash-data-news" data-flashdata="<?= $this->session->flashdata('flash') ?>">
 
-        </div>
-        <div class="flash-data-data" data-flashdata="">
-        </div>
+</div>
+<div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
+</div>
         <div class="section-header">
             <h1><?=$title;?></h1>
         </div>
@@ -13,22 +13,22 @@
         <div class="row">
             <div class="col-12 ">
                 <div class="card">
-                    <div class="flash-data-news" data-flashdata="">
+                <div class="flash-data-news" data-flashdata="<?= $this->session->flashdata('flash') ?>">
 
                     </div>
-                    <div class="flash-data-data" data-flashdata="">
+                    <div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
                     </div>
                     
                     <div class="card-header">
                         <h4>Tambah Data Pasien Baru</h4>
                     </div>
                     <div class="card-body">
-                        <form method="" action="<?=base_url();?>" class="needs-validation" novalidate="">
+                        <form method="POST" action="<?=base_url();?>Manajemenpasien/tambah" class="needs-validation" novalidate="">
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Rekam
                                     Medis</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="id_patient" class="form-control" required autofocus
+                                    <input type="text" name="id_patient" class="form-control" required autofocus placeholder="Masukan nomor rekam medis"
                                         tabindex="1">
                                     <div class="invalid-feedback">
                                         Nomor rekam medis tidak boleh kosong
@@ -39,7 +39,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama
                                 </label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="name_patient" class="form-control" required autofocus
+                                    <input type="text" name="name_patient" class="form-control" required autofocus placeholder="Masukan nama pasien"
                                         tabindex="1">
                                     <div class="invalid-feedback">
                                         Silahkan isi nama pasien terlebih dahulu
@@ -49,7 +49,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NIK</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="text" name="nik_patient" class="form-control" required autofocus
+                                    <input type="text" name="nik_patient" class="form-control" required autofocus placeholder="Masukan NIK pasien"
                                         tabindex="1">
                                     <div class="invalid-feedback">
                                         NIK tidak boleh kosong
@@ -59,7 +59,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal lahir</label>
                                 <div class="col-sm-12 col-md-7">
-                                <input class="form-control" type="date" value="2021-01" id="example-month-input" name="tanggal_covid"  required autofocus>
+                                <input class="form-control" type="date" value="2021-01" id="example-month-input" name="date_of_birth_patient"  required autofocus>
                     
                                     <div class="invalid-feedback">
                                     Silahkan isi Tanggal terlebih dahulu
@@ -69,7 +69,7 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Umur</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <input type="number" name="age_patient" class="form-control" required autofocus
+                                    <input type="number" name="age_patient" class="form-control" required autofocus placeholder="Masukan umur pasien"
                                         tabindex="1">
                                     <div class="invalid-feedback">
                                         Silahkan isi umur pasien
@@ -80,7 +80,7 @@
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis
                                     Kelamin</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <select class="custom-select" required autofocus>
+                                    <select class="custom-select" name="gender_patient" required autofocus>
                                         <option selected disabled>Pilih jenis kelamin</option>
                                         <option value="Pria">Pria</option>
                                         <option value="Wanita">Wanita</option>
@@ -93,9 +93,9 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Alamat</label>
                                 <div class="col-sm-12 col-md-7">
-                                    <div class="form-group" required autofocus name="address_patient">
+                                    <div class="form-group"  >
                                         <label>Textarea</label>
-                                        <textarea class="form-control" style="height: 150px;" cols="10000"></textarea>
+                                        <textarea class="form-control"  required autofocus name="address_patient"style="height: 150px;" cols="10000"></textarea>
                                     </div>
                                     <div class="invalid-feedback">
                                         Alamat tidak boleh kosong
