@@ -16,7 +16,7 @@
                         <div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
                         </div>
 
-                        <a href="<?= base_url('Disclaimer'); ?>" class="btn btn-primary mb-3">Tambah data baru</a>
+                        <a href="<?= base_url(); ?>" class="btn btn-primary mb-3">Tambah data baru</a>
 
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -32,8 +32,7 @@
                                     <th scope="row">1</th>
                                     <td><img src="assets/img/profil/default.jpg" class="img-thumbnail" style="width:120px;height:120px;"></td>
                                     <td>
-                                        <a href="<?= base_url(); ?>"
-                                            class="badge badge-success">ubah</a>
+                                        <a href="<?= base_url('Disclaimer/ubah'); ?>" class="badge badge-success">ubah</a>
                                         <a href="<?= base_url(); ?>"
                                             class="badge badge-danger hapus-news">hapus</a>
                                     </td>
