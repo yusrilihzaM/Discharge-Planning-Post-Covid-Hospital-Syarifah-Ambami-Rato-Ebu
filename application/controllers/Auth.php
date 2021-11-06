@@ -62,6 +62,7 @@ class Auth extends CI_Controller {
         if($season_user){
             $this->session->unset_userdata('id_user');
             $this->session->unset_userdata('role_id');
+            $this->session->unset_userdata('id_patient');
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Kamu telah keluar</div>');
             redirect('worker');
         }

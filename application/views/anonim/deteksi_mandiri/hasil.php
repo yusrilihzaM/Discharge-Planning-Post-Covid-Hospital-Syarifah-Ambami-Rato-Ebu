@@ -14,10 +14,12 @@
         <div class="col-12 mb-4">
             <div class="hero align-items-center bg-success text-white">
                 <div class="hero-inner text-center">
-                    <h2>Selamat anda telah berhasil!</h2>
+                    <h2>Hasil deteksi mandiri anda</h2>
+                    <h1><?= $score?></h1>
+                    <h3 style="background-color: red;"><?= $ket?></h3>
                     <p class="lead">Selanjutnya, silahkan klik tombol di bawah untuk masuk ke halaman beranda</p>
                     <div class="mt-4">
-                        <a href="#" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="fas fa-sign-in-alt"></i>Kembali ke beranda</a>
+                        <a href="<?=base_url()?>pasien" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="fas fa-sign-in-alt"></i>Pergi ke beranda pasien</a>
                     </div>
                 </div>
             </div>

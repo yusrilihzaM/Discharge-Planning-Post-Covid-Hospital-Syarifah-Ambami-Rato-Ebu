@@ -31,7 +31,6 @@
                 </div>
             </div>
             <?php
-          
 
             $menu=$this->db->query("SELECT * FROM assessment_type  ORDER BY id_assessment_type ASC")->result_array();
         ?>
@@ -47,7 +46,7 @@
                             ";
             $subMenu = $this->db->query($querySubMenu)->result_array();
         ?>
-         <?php foreach ($subMenu as $sm) : ?>
+            <?php foreach ($subMenu as $sm) : ?>
             <div class="card">
                 <div class="card-body">
                     <div class="row">
@@ -56,10 +55,12 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-check">
-                                <label class="radio-inline"><input type="radio" value="<?= $sm['weight_yes']; ?>" name="<?= $sm['id_assessment_question']; ?>" >Ya</label>
-                                <label class="radio-inline"><input type="radio" value="<?= $sm['weight_no']; ?>"name="<?= $sm['id_assessment_question']; ?>">Tidak</label>
+                                <label class="radio-inline mr-4"><input type="radio" value="<?= $sm['weight_yes']; ?>"
+                                        name="<?= $sm['id_assessment_question']; ?>">Ya</label>
+                                <label class="radio-inline"><input type="radio" value="<?= $sm['weight_no']; ?>"
+                                        name="<?= $sm['id_assessment_question']; ?>">Tidak</label>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
