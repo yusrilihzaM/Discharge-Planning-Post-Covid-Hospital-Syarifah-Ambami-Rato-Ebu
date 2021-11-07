@@ -21,7 +21,7 @@
                                     <div class="form-group row">
                                         
                                         <div class="col-1">
-                                                <img src="assets/img/profil/" class="img-thumbnail" alt="">
+                                                <img src="" class="img-thumbnail" alt="">
                                         </div>
 
                                             <div class="col-sm-11">
@@ -30,12 +30,6 @@
                                                     <a href="<?= base_url('Disclaimer');?>" class="btn btn-success" type="submit">Simpan</a>
                                                 </form>
                                             </div>
-
-                                            <!-- <div class="col-sm-11">
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="image" name="image">
-                                                    <label class="custom-file-label" for="image">Pilih file</label>
-                                                </div> -->
                                                 
                                             </div>
 

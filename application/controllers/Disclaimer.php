@@ -29,9 +29,10 @@ class Disclaimer extends CI_Controller {
         $this->load->view('templates/user/left_menu', $data); 	
         $this->load->view('disclaimer/index', $data); 
         $this->load->view('templates/user/footer', $data); 
-    }
-
+    } 
+    
     public function ubah()
+    
     {
         $data['title'] = 'Ubah Disclaimer';
         $season_user=$this->session->userdata('id_user');
@@ -50,5 +51,5 @@ class Disclaimer extends CI_Controller {
         $this->load->view('templates/user/left_menu', $data); 	
         $this->load->view('disclaimer/ubah', $data); 
         $this->load->view('templates/user/footer', $data); 
-    }
+    } 
 }
