@@ -71,10 +71,17 @@ class Profil extends CI_Controller {
         }
         // var_dump( $data['name']);
         // die;
-        $this->load->view('templates/user/header', $data); 
-		$this->load->view('templates/user/navbar', $data); 	
-        $this->load->view('templates/user/left_menu', $data); 	
-        $this->load->view('profile/password', $data); 
-        $this->load->view('templates/user/footer', $data); 	
+        $this->form_validation->set_rules('password_lama', 'Password lama', 'required|trim');
+        $this->form_validation->set_rules('password_baru1', 'Password baru', 'required|trim|min_length[8]|matches[password_baru2]');
+        $this->form_validation->set_rules('password_baru2', 'Ulangi password baru', 'required|trim|min_length[8]|matches[password_baru1]');
+
+        if ($this->form_validation->run() == false){
+            $this->load->view('templates/user/header', $data); 
+            $this->load->view('templates/user/navbar', $data); 	
+            $this->load->view('templates/user/left_menu', $data); 	
+            $this->load->view('profile/password', $data); 
+            $this->load->view('templates/user/footer', $data); 	
+
+        }
 	}
 }
