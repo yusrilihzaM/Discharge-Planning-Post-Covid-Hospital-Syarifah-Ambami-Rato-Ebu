@@ -12,33 +12,42 @@
 
         <div class="row">
                 <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
+                    
+                        <div class="card">
+                            <div class="card-body">
 
-                            <div class="card-header">
-                                
-                                <div class="form-group row">
-                                    <div class="col-sm-3">
-                                        <img src="assets/img/profil/default.jpg" class="img-thumbnail" alt="">
-                                    </div>
-
-                                    <div class="col-sm-9">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="gambar" name="gambar">
-                                            <label class="custom-file-label" for="gambar">Pilih file</label>
+                                <div class="card-header">
+                                    
+                                    <div class="form-group row">
+                                        
+                                        <div class="col-1">
+                                                <img src="assets/img/profil/" class="img-thumbnail" alt="">
                                         </div>
+
+                                            <div class="col-sm-11">
+                                                <form action="/action_page.php">
+                                                    <input type="file" class="form-input" id="image" name="image">
+                                                    <a href="<?= base_url('Disclaimer');?>" class="btn btn-success" type="submit">Simpan</a>
+                                                </form>
+                                            </div>
+
+                                            <!-- <div class="col-sm-11">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                                    <label class="custom-file-label" for="image">Pilih file</label>
+                                                </div> -->
+                                                
+                                            </div>
+
+                                            
                                     </div>
-
-                                    <div class="orm-group row">
-
-                                    </div>
-
                                 </div>
-                                
+
                             </div>
-                    </div>
+                        </div>
+                    
                 </div>
-            </div>
+        </div>
 
     </div>
 </div>
