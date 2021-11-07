@@ -165,8 +165,8 @@ class Submenu extends CI_Controller {
 	{
         $this->Submenu_model->delete_user_sub_menu($id_user_menu);
         $this->session->set_flashdata('flash', 'dihapus');
-        $this->session->set_flashdata('data', 'Menu');
-        $url="Menu";
+        $this->session->set_flashdata('data', 'Submenu');
+        $url="submenu";
 		redirect($url);
 	}
 }

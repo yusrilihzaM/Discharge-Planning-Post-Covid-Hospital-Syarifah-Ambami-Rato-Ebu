@@ -31,35 +31,35 @@
                                     <th scope="col">No</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">Username</th>
-                                    <th scope="col">Password</th>
                                     <th scope="col">Tanggal Lahir</th>
                                     <th scope="col">Umur</th>
                                     <th scope="col">Jenis Kelamin</th>
-                                    <th scope="col">Alamat</th>
+                                    <th scope="col">Peran</th>
                                     <th scope="col">Aksi</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                            <?php $i = 1;?>
+                                <?php foreach ($data as $m) : ?>
                                 <tr>
-                                    <td style="width: 4%;"></td>
-                                    <td>name</td>
-                                    <td>username</td>
-                                    <td>password</td>
-                                    <td>date_of_birth</td>
-                                    <td>age</td>
-                                    <td>gender</td>
-                                    <td>address</td>
+                                    <td style="width: 4%;"><?= $i; ?></td>
+                                    <td><?= $m['name']; ?></td>
+                                    <td><?= $m['username']; ?></td>
+                                    <td><?= $m['date_of_birth']; ?></td>
+                                    <td><?= $m['age']; ?></td>
+                                    <td><?= $m['gender']; ?></td>
+                                    <td><?= $m['role']; ?></td>
 
                                     <td style="width: 15%;">
-                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url('manajemenpegawai/editdatapegawai');?>" style=" color:white;"></a>
-                                        <a class="btn btn-danger fas fa-trash-alt hapus-news" href=""
+                                        <a class="btn btn-warning  fas fa-edit" href="<?= base_url();?>manajemenpegawai/editdatapegawai/<?= $m['id_user']; ?>" style=" color:white;"></a>
+                                        <a class="btn btn-danger fas fa-trash-alt hapus-news" href="<?= base_url();?>manajemenpegawai/hapus/<?= $m['id_user']; ?>"
                                             style="color:white;"></a>
                                     </td>
 
                                 </tr>
-                                
+                                <?php $i++; ?>
+                                <?php endforeach; ?>
 
                             </tbody>
 
