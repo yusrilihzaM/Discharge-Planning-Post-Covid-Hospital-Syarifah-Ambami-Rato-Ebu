@@ -50,7 +50,7 @@
                 <a href="<?= base_url('obatpasien')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-info">
-                            <i class="fas fa-pills"></i> 
+                            <i class="fas fa-pills"></i>
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
@@ -206,9 +206,63 @@
                 <h5 class="modal-title" id="kontrolModalLabel">Jadwal Kontrol Anda</h5>
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
             </div>
-
+            <?php
+           
+             
+                $hari = date ("D",strtotime($jadwal_kontrol_terbaru['date_control_patient']));
+                $tanggal = date ("d F Y",strtotime($jadwal_kontrol_terbaru['date_control_patient']));
+                switch($hari){
+                    case 'Sun':
+                        $hari_ini = "Minggu";
+                    break;
+             
+                    case 'Mon':			
+                        $hari_ini = "Senin";
+                    break;
+             
+                    case 'Tue':
+                        $hari_ini = "Selasa";
+                    break;
+             
+                    case 'Wed':
+                        $hari_ini = "Rabu";
+                    break;
+             
+                    case 'Thu':
+                        $hari_ini = "Kamis";
+                    break;
+             
+                    case 'Fri':
+                        $hari_ini = "Jumat";
+                    break;
+             
+                    case 'Sat':
+                        $hari_ini = "Sabtu";
+                    break;
+                    
+                    default:
+                        $hari_ini = "Tidak di ketahui";		
+                    break;
+                    }
+             
+               
+             
+            
+            ?>
             <div class="modal-body">
-                Hai pasien, Jadwal kontrol anda pada hari Senin, 8 September 2021. Pukul 13.00 WIB
+                <?php
+                if($jadwal_kontrol_terbaru['name_patient']):
+                ?>
+                Hai <?=$jadwal_kontrol_terbaru['name_patient']?><br> Jadwal kontrol terbaru anda pada hari
+                <?=$hari_ini?>, <?=$tanggal?><br>
+                Silakan menuju RSUD Syarifah Ambami Rato Ebu
+                <?php
+               else:
+                ?>
+                Mohon maaf jadwal kontrol terbaru anda masih belum tersedia harap tunggu
+                <?php
+               endif;
+                ?>
             </div>
 
             <div class="modal-footer">

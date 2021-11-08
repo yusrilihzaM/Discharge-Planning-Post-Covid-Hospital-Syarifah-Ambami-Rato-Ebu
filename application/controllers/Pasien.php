@@ -24,6 +24,7 @@ class Pasien extends CI_Controller {
             $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
         }
         $data['time_limit']=20;
+        $data['jadwal_kontrol_terbaru']=$this->db->query("SELECT * FROM control_patient NATURAL JOIN m_patient WHERE id_patient=$season_patient ORDER BY id_control_patient ASC LIMIT 1")->row_array();
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
         $this->load->view('templates/user/left_menu', $data); 	
