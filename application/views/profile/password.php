@@ -48,14 +48,18 @@
                                 </div>
                                 <div class="card-body">
 
-                                <form action="<?= base_url('profile/password');?>" class="action"></form>
+                                <?= $this->session->flashdata('message'); ?>
+                                <form method="POST" action="<?= base_url('profil/password');?>" class="needs-validation" novalidate="">
                                         <div class="form-group row align-items-center">
                                             <label for="site-title" class="form-control-label col-sm-3 text-md-right">Password
                                                 lama</label>
                                             <div class="col-sm-6 col-md-9">
-                                                <input type="password" name="password_lama" class="form-control" id="site-title"
-                                                    placeholder="Password lama">
+                                                <input type="password" class="form-control" name="password_lama" id="password_lama"
+                                                    placeholder="Password lama" tabindex="1" required autofocus>
                                                 <?= form_error('password_lama', '<small class="text-danger pl-3">', '</small>'); ?>
+                                                <div class="invalid-feedback">
+                                                    Silahkan isi password lama anda
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row align-items-center">
@@ -63,8 +67,11 @@
                                                 class="form-control-label col-sm-3 text-md-right">Password baru</label>
                                             <div class="col-sm-6 col-md-9">
                                                 <input type="password" name="password_baru1" class="form-control"
-                                                    id="password_baru1" placeholder="Password baru">
+                                                    id="password_baru1" placeholder="Password baru" tabindex="1" required autofocus>
                                                 <?= form_error('password_baru1', '<small class="text-danger pl-3">', '</small>'); ?>
+                                                <div class="invalid-feedback">
+                                                    Silahkan isi password baru anda
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row align-items-center">
@@ -72,8 +79,11 @@
                                                 password baru</label>
                                             <div class="col-sm-6 col-md-9">
                                                 <input type="password" name="password_baru2" class="form-control" id="password_baru2"
-                                                    placeholder="Ulangi password baru">
+                                                    placeholder="Ulangi password baru" tabindex="1" required autofocus>
                                                 <?= form_error('password_baru2', '<small class="text-danger pl-3">', '</small>'); ?>
+                                                <div class="invalid-feedback">
+                                                    Silahkan isi ulangi password baru anda
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="card-footer bg-whitesmoke text-md-right">

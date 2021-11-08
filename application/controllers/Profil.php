@@ -72,8 +72,8 @@ class Profil extends CI_Controller {
         // var_dump( $data['name']);
         // die;
         $this->form_validation->set_rules('password_lama', 'Password lama', 'required|trim');
-        $this->form_validation->set_rules('password_baru1', 'Password baru', 'required|trim|min_length[8]|matches[password_baru2]');
-        $this->form_validation->set_rules('password_baru2', 'Ulangi password baru', 'required|trim|min_length[8]|matches[password_baru1]');
+        $this->form_validation->set_rules('password_baru1', 'Password baru', 'required|trim|min_length[6]|matches[password_baru2]');
+        $this->form_validation->set_rules('password_baru2', 'Ulangi password baru', 'required|trim|min_length[6]|matches[password_baru1]');
 
         if ($this->form_validation->run() == false){
             $this->load->view('templates/user/header', $data); 
@@ -81,7 +81,28 @@ class Profil extends CI_Controller {
             $this->load->view('templates/user/left_menu', $data); 	
             $this->load->view('profile/password', $data); 
             $this->load->view('templates/user/footer', $data); 	
+        } else {
+            $password_lama = $this->input->post('password_lama');
+            $password_baru = $this->input->post('password_baru1');
+            if(!password_verify('password_lama', $data['user']['password'])) {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Password lama salah!</div>');
+                redirect('profil/password');
+            } else {
+                if ($password_lama == $password_baru) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Password baru tidak boleh sama dengan password lama!</div>');
+                redirect('profil/password');
+                } else {
+                    # password yg benar
+                    $password_hash = $password_hash($password_baru, PASSWORD_DEFAULT);
 
+                    $this->db->set('password', $password_hash);
+                    $this->db->update('m_user'); 
+
+
+                    $this->session->set_flashdata('message', '<div class="alert alert-sucsess" role="alert"> Password berhasil diubah!</div>');
+                redirect('profil/password');
+                }
+            }
         }
 	}
 }
