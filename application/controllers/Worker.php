@@ -45,7 +45,7 @@ class Worker extends CI_Controller {
                         redirect('nutrisionis');
                     } else
                     if ($user['role_id'] == 4) {
-                        redirect('nurse');
+                        redirect('perawat');
                     } 
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah</div>');
