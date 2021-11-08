@@ -26,12 +26,12 @@
                                     Deteksi Mandiri</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active"
+                                <a class="nav-link "
                                     href="<?=base_url()?>ViewPatient/activitypatient/<?=$data['id_patient']?>">Riwayat
                                     Aktifitas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"
+                                <a class="nav-link active"
                                     href="<?=base_url()?>ViewPatient/historyprescription/<?=$data['id_patient']?>">Riwayat
                                     Resep Dokter</a>
                             </li>
@@ -41,7 +41,8 @@
                                     dikonsumsi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-lin btn btn-outline-danger" href="<?=base_url()?>ViewPatient/addprescription/<?=$data['id_patient']?>"><i
+                                <a class="nav-lin btn btn-outline-danger"
+                                    href="<?=base_url()?>ViewPatient/addprescription/<?=$data['id_patient']?>"><i
                                         class="fas fa-file-medical bg-outline-danger"></i> Beri Resep</a>
                             </li>
                         </ul>
@@ -49,12 +50,14 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                        <table id="datatable" class="table table-striped table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Tanggal dan waktu</th>
+                                    <th scope="col">Resep</th>
+                                    <th scope="col">Status</th>
                                     <th scope="col">Aksi</th>
 
                                 </tr>
@@ -67,16 +70,37 @@
                             <tbody>
                                 <?php
                                     $i=1;
-                                    foreach($activity_patient as $activity_patient):
+                                    foreach($prescription_patient as $prescription_patient):
                                     ?>
                                 <tr>
 
-                                    <td><a href="<?= base_url()?>ViewPatient/detailactivity/<?=$activity_patient['id_activity_patient']?>"><?=$i?></a></td>
-                                    <td><a
-                                            href="<?= base_url()?>ViewPatient/detailactivity/<?=$activity_patient['id_activity_patient']?>"><?=$activity_patient['date_activity_patient']?></a>
+                                    <td style="width: 2%;"><a
+                                            href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$i?></a>
                                     </td>
-                                    <td><a class="badge badge-success" href="<?= base_url()?>ViewPatient/detailactivity/<?=$activity_patient['id_activity_patient']?>">Lihat Detail
-                                            Aktifitas</a></td>
+                                    <td><a
+                                            href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$prescription_patient['date_prescription_patient']?></a>
+                                    </td>
+                                    <td><a
+                                            href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$prescription_patient['prescription']?></a>
+                                    </td>
+                                    <td><a
+                                            href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$prescription_patient['status']?></a>
+                                    </td>
+                                    <td>
+
+                                        <a class="badge badge-success"
+                                            href="<?= base_url()?>ViewPatient/detailprescription/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>">
+                                            Detail
+                                        </a>
+                                        <a class="badge badge-warning"
+                                            href="<?= base_url()?>ViewPatient/updateprescription/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>">
+                                            Edit
+                                        </a>
+                                        <a class="badge badge-danger"
+                                            href="<?= base_url()?>ViewPatient/hapusprescription/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>">
+                                            Hapus
+                                        </a>
+                                    </td>
                                 </tr>
                                 <?php
                                     $i=$i+1;

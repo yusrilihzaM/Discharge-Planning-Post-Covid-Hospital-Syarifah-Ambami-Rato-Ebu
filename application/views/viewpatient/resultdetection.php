@@ -41,7 +41,7 @@
                                     dikonsumsi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-lin btn btn-outline-danger" href="<?=base_url()?>"><i
+                                <a class="nav-lin btn btn-outline-danger" href="<?=base_url()?>ViewPatient/addprescription/<?=$data['id_patient']?>"><i
                                         class="fas fa-file-medical bg-outline-danger"></i> Beri Resep</a>
                             </li>
                         </ul>

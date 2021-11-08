@@ -31,7 +31,7 @@
                                 <a class="nav-link" href="<?=base_url()?>ViewPatient/medicine/<?=$data['id_patient']?>">Obat yang sedang dikonsumsi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-lin btn btn-outline-danger" href="<?=base_url()?>"><i class="fas fa-file-medical bg-outline-danger"></i> Beri Resep</a>
+                                <a class="nav-lin btn btn-outline-danger" href="<?=base_url()?>ViewPatient/addprescription/<?=$data['id_patient']?>"><i class="fas fa-file-medical bg-outline-danger"></i> Beri Resep</a>
                             </li>
                         </ul>
                     </div>

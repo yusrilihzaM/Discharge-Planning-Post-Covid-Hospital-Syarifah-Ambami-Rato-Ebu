@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Aktivitas Anda</h4>
+                            <h4>Obat yang sedang anda konsumsi</h4>
                         </div>
                         <div class="card-body">
                             <form method="POST" action="<?=base_url()?>obatpasien/save" class="needs-validation"
