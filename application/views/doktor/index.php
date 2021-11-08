@@ -24,10 +24,10 @@
                             </div>
                         <div class="card-wrap">
                                 <div class="card-header">
-                                    <h4 mx-auto w-100 style="color: black;">Resep Dokter</h4>
+                                    <h4 mx-auto w-100 style="color: black;">Resep obat pasien</h4>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="mt-2" style="font-size: x-small;">Resep obat dari dokter</h4>
+                                    <h4 class="mt-2" style="font-size: x-small;">Resep obat yang diberikan oleh dokter</h4>
                                 </div>
                         </div>
                     </div>

@@ -45,11 +45,12 @@
 
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('obatpasien')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-info">
-                            <i class="fas fa-capsules"></i>
+                            <i class="fas fa-pills"></i> 
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
@@ -67,11 +68,11 @@
             <?php
 
             
-           date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set('Asia/Jakarta');
 
             $time=date("h:i:sa");
             if(date("h")>=$time_limit):
-           ?>
+        ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('aktivitaspasien')?>">
                     <div class="card card-statistic-1">
@@ -103,7 +104,7 @@
 
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Memasukan obat-obat yang anda konsumsi
+                                <h4 class="mt-2" style="font-size: x-small;">Obat yang di konsumsi
                                     selama ini</h4>
                             </div>
                         </div>

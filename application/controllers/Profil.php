@@ -23,7 +23,7 @@ class Profil extends CI_Controller {
             $data['date_of_birth'] = $data['user']["date_of_birth"];
             $data['age'] = $data['user']["age"];
             $data['address'] = $data['user']["address"];
-           
+        
         }
         elseif($season_patient){
             $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
@@ -32,7 +32,7 @@ class Profil extends CI_Controller {
             $data['role'] = $data['user']["role"];
             $data['age'] = $data['user']["age_patient"];
             $data['address'] = $data['user']["address_patient"];
-          
+        
         }
         // var_dump($data['user']);
         // die;

@@ -39,6 +39,25 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <a href="<?= base_url('obatpasien')?>">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-info">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Resep obat pasien</h4>
+                                
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Resep obat yang diberikan oleh dokter</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('Perawat/aktivitasperawat');?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-danger">
@@ -67,7 +86,7 @@
                                 <h4 mx-auto w-100 style="color: black;">Obat Pasien</h4>
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Obat pasien saat ini</h4>
+                                <h4 class="mt-2" style="font-size: x-small;">Input obat pasien yang dikonsumsi selama ini</h4>
                             </div>
                         </div>
                     </div>
@@ -85,31 +104,14 @@
                                 <h4 mx-auto w-100 style="color: black;">Menu Diet</h4>
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Menu makanan pasien</h4>
+                                <h4 class="mt-2" style="font-size: x-small;">Makanan harian yang pasien konsumsi</h4>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <a href="<?= base_url('obatpasien')?>">
-                    <div class="card card-statistic-1">
-                        <div class="card-icon bg-info">
-                            <i class="fas fa-pills"></i>
-                        </div>
-                        <div class="card-wrap">
-                            <div class="card-header">
-                                <h4 mx-auto w-100 style="color: black;">Resep Dokter</h4>
-                                
-                            </div>
-                            <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Resep obat dari dokter</h4>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            
 
     </section>
 </div>

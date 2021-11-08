@@ -15,9 +15,9 @@
     <section class="section">
     <div class="section-header">
             <h1><?=$title;?></h1>
-          </div>
+        </div>
         <div class="row">
-       
+    
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-primary">
@@ -25,58 +25,92 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4 mx-auto w-100>Kontrol</h4>
+                            <h4 mx-auto w-100 style="color: black;">Kontrol</h4>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="mt-2" style="font-size: x-small;">Jadwal Kontrol ke rumah sakit</h4>
                         </div>
                         
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                    <div class="card-icon bg-danger">
-                        <i class="fas fa-walking"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Aktivitas</h4>
-                        </div>
-                        <div class="card-body">
 
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-info">
+                            <i class="fas fa-pills"></i> 
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                    <div class="card-icon bg-warning">
-                        <i class="fas fa-capsules"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Obat</h4>
-                        </div>
-                        <div class="card-body">
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Resep obat pasien</h4>
 
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Resep obat yang diberikan oleh dokter</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                    <div class="card-icon bg-success">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Menu Diet</h4>
-                        </div>
-                        <div class="card-body">
 
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-danger">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Aktivitas</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Kegiatan harian pasien</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="<?= base_url('obatpasien')?>">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-warning">
+                            <i class="fas fa-capsules"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Obat yang sedang pasien konsumsi</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Input obat pasien yang dikonsumsi
+                                    selama ini</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="<?= base_url('dietpasien')?>">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-success">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Menu Diet</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Makanan harian yang pasien konsumsi</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
     </section>
 </div>
