@@ -27,7 +27,7 @@ class Profil extends CI_Controller {
         }
         elseif($season_patient){
             $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
-            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+           
             $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
             $data['role'] = $data['user']["role"];
             $data['age'] = $data['user']["age_patient"];
@@ -58,7 +58,7 @@ class Profil extends CI_Controller {
         }
         elseif($season_patient){
             $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
-            $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+
             $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
             $data['role'] = $data['user']["role"];
             $data['password'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["password_patient"];
