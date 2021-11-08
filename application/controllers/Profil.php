@@ -23,10 +23,7 @@ class Profil extends CI_Controller {
             $data['date_of_birth'] = $data['user']["date_of_birth"];
             $data['age'] = $data['user']["age"];
             $data['address'] = $data['user']["address"];
-            $data['provinsi'] = $this->db->query("Select * FROM m_user natural join role natural join m_provinsi where id_user=$season_user")->row_array()['provinsi'];
-            $data['kota'] = $this->db->query("Select * FROM m_user natural join role natural join  m_kab_kota  where id_user=$season_user")->row_array()['kabupaten_kota'];
-            $data['kecamatan'] = $this->db->query("Select * FROM m_user natural join role  natural join m_kecamatan where id_user=$season_user")->row_array()['kecamatan'];
-            $data['kelurahan'] = $this->db->query("Select * FROM m_user natural join role  natural join m_kelurahan where id_user=$season_user")->row_array()['kelurahan'];
+           
         }
         elseif($season_patient){
             $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
@@ -35,10 +32,7 @@ class Profil extends CI_Controller {
             $data['role'] = $data['user']["role"];
             $data['age'] = $data['user']["age_patient"];
             $data['address'] = $data['user']["address_patient"];
-            $data['provinsi'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi  where id_patient=$season_patient")->row_array()['provinsi'];
-            $data['kota'] = $this->db->query("Select * FROM m_patient natural join role natural join  m_kab_kota  where id_patient=$season_patient")->row_array()['kabupaten_kota'];
-            $data['kecamatan'] = $this->db->query("Select * FROM m_patient natural join role  natural join m_kecamatan where id_patient=$season_patient")->row_array()['kecamatan'];
-            $data['kelurahan'] = $this->db->query("Select * FROM m_patient natural join role  natural join m_kelurahan where id_patient=$season_patient")->row_array()['kelurahan'];
+          
         }
         // var_dump($data['user']);
         // die;

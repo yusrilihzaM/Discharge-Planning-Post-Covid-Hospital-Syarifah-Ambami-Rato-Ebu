@@ -68,6 +68,11 @@
 <script src="<?= base_url(); ?>assets_user/libs/air-datepicker/js/i18n/datepicker.en.js"></script>
 <!-- Page Specific JS File -->
 <script src="<?= base_url() ?>assets_user/js/page/index.js"></script>
+<!-- Summernote js -->
+<script src="<?= base_url() ?>assets_user/libs/summernote/summernote-bs4.min.js"></script>
+
+<!-- init js -->
+<script src="<?= base_url() ?>assets_user/js/pages/summernote.init.js"></script>
 </body>
 
 </html>

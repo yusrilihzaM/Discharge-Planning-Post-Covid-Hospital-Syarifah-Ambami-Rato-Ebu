@@ -18,6 +18,14 @@ class AssessmentQuestion_model extends CI_model
         $this->db->where('id_assessment_question',$id_assessment_question);
         return $this->db->get()->row_array();
     }
+    public function get_assessment_answer($id_patient)
+    {
+        return $this->db->query("SELECT * FROM assessment_patient NATURAL JOIN assessment_answer WHERE id_patient=$id_patient ORDER BY id_assessment_question ASC")->result_array();
+    }
+    public function get_assessment_patient()
+    {
+        return $this->db->query("SELECT * FROM assessment_patient")->result_array();
+    }
     public function delete_assessment_question($id_assessment_question){
         $this->db->where('id_assessment_question', $id_assessment_question);
         $this->db->delete('assessment_question');

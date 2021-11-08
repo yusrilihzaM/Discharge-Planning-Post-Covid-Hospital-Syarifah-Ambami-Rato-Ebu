@@ -71,7 +71,7 @@ class Menu extends CI_Controller {
         $menu=$this->input->post('menu');
         $this->db->insert('user_menu', ['menu' =>$menu]);
         $this->session->set_flashdata('flash', 'Ditambahkan');
-		$this->session->set_flashdata('data', 'Kecamatan');
+		$this->session->set_flashdata('data', 'Menu');
     
         redirect('menu');
     }

@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+date_default_timezone_set('Asia/Jakarta');
 class Pasien extends CI_Controller {
 
     public function __construct()
@@ -23,8 +23,7 @@ class Pasien extends CI_Controller {
             $data['user'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array();
             $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
         }
-        // var_dump( $data['name']);
-        // die;
+        $data['time_limit']=20;
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
         $this->load->view('templates/user/left_menu', $data); 	

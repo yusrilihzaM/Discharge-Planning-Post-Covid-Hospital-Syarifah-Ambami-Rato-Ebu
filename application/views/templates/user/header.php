@@ -40,7 +40,7 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url() ?>assets_user/css/style.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets_user/css/components.css">
-    
+    <link href="<?= base_url() ?>assets_user/libs/summernote/summernote-bs4.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>

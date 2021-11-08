@@ -50,6 +50,10 @@ class Deteksimandiri extends CI_Controller {
         }
         $total_score=(double)$this->db->query("SELECT SUM(score_answer)total_score FROM assessment_answer WHERE id_assessment_patient=$id_assessment_patient")->row_array() ["total_score"];
 
+        $this->db->update('m_patient', [
+            "is_active"=>1
+        ], ['id_patient'=>$id_patient]);
+
         $this->db->update('assessment_patient', [
             "total_score"=>$total_score
         ], ['id_assessment_patient'=>$id_assessment_patient]);

@@ -20,10 +20,10 @@
                                     </figure>
                                 </div>
                                 <div class="col-auto">
-                                    <h5  style="font-weight: bold;color:black;">
+                                    <h5 style="font-weight: bold;color:black;">
                                         <?=$name?>
                                     </h5>
-                                        Jenis Akun: <?=$role?>
+                                    Jenis Akun: <?=$role?>
                                 </div>
                             </div>
                         </div>
@@ -31,8 +31,10 @@
                     <div class="card">
                         <div class="card-body">
                             <ul class="nav nav-pills flex-column">
-                                <li class="nav-item"><a href="<?= base_url() ?>profil" class="nav-link active">Profil</a></li>
-                                <li class="nav-item"><a href="<?= base_url() ?>profil/password" class="nav-link">Ganti kata sandi</a></li>
+                                <li class="nav-item"><a href="<?= base_url() ?>profil"
+                                        class="nav-link active">Profil</a></li>
+                                <li class="nav-item"><a href="<?= base_url() ?>profil/password" class="nav-link">Ganti
+                                        kata sandi</a></li>
                             </ul>
                         </div>
                     </div>
@@ -46,50 +48,31 @@
                             <div class="card-body">
                                 <p class="text-muted">Data pribadi</p>
                                 <div class="form-group row align-items-center">
-                                    <label for="site-title" class="form-control-label col-sm-3 text-md-right">Nama</label>
+                                    <label for="site-title"
+                                        class="form-control-label col-sm-3 text-md-right">Nama</label>
                                     <div class="col-sm-6 col-md-9">
-                                        <input type="text" disabled name="name" class="form-control" id="site-title" placeholder="<?=$name?>">
+                                        <input type="text" disabled name="name" class="form-control" id="site-title"
+                                            placeholder="<?=$name?>">
                                     </div>
                                 </div>
                                 <div class="form-group row align-items-center">
                                     <label for="umur" class="form-control-label col-sm-3 text-md-right">Umur</label>
                                     <div class="col-sm-6 col-md-9">
-                                        <input type="text" disabled name="name" class="form-control" id="umur" placeholder="<?=$age?>">
+                                        <input type="text" disabled name="name" class="form-control" id="umur"
+                                            placeholder="<?=$age?>">
                                     </div>
                                 </div>
+
                                 <div class="form-group row align-items-center">
-                                    <label for="provinsi" class="form-control-label col-sm-3 text-md-right">Provinsi</label>
-                                    <div class="col-sm-6 col-md-9">
-                                        <input type="text" disabled name="name" class="form-control" id="provinsi" placeholder="<?=$provinsi?>">
-                                    </div>
-                                </div>
-                                <div class="form-group row align-items-center">
-                                    <label for="KOta/Kabupaten" class="form-control-label col-sm-3 text-md-right">Kota/Kabupaten</label>
-                                    <div class="col-sm-6 col-md-9">
-                                        <input type="text" disabled name="name" class="form-control" id="KOta/Kabupaten" placeholder="<?=$kota?>">
-                                    </div>
-                                </div>
-                                <div class="form-group row align-items-center">
-                                    <label for="Kecamatan" class="form-control-label col-sm-3 text-md-right">Kecamatan</label>
-                                    <div class="col-sm-6 col-md-9">
-                                        <input type="text" disabled name="name" class="form-control" id="Kecamatan" placeholder="<?=$kecamatan?>">
-                                    </div>
-                                </div>
-                                <div class="form-group row align-items-center">
-                                    <label for="Kelurahan" class="form-control-label col-sm-3 text-md-right">Kelurahan</label>
-                                    <div class="col-sm-6 col-md-9">
-                                        <input type="text" disabled name="name" class="form-control" id="Kelurahan" placeholder="<?=$kelurahan?>">
-                                    </div>
-                                </div>
-                                <div class="form-group row align-items-center">
-                                    <label for="site-description" class="form-control-label col-sm-3 text-md-right">Alamat</label>
+                                    <label for="site-description"
+                                        class="form-control-label col-sm-3 text-md-right">Alamat</label>
                                     <div class="col-sm-6 col-md-9">
                                         <textarea class="form-control" disabled name="site_description"
                                             id="site-description"><?=$address?></textarea>
                                     </div>
                                 </div>
-                               
-                        </div>
+
+                            </div>
                     </form>
                 </div>
             </div>

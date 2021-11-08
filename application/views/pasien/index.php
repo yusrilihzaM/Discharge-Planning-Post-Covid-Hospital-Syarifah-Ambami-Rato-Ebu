@@ -16,30 +16,63 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <div class="main-content">
     <section class="section">
-    <div class="section-header">
+        <div class="section-header">
             <h1><?=$title;?></h1>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1"  type="button" data-bs-toggle="modal" data-bs-target="#kontrolModal">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+
+                <?= $this->session->flashdata('message');?>
+                <div class="flash-data-news" data-flashdata="<?= $this->session->flashdata('flash') ?>">
+
+                </div>
+                <div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
+                </div>
+                <div class="card card-statistic-1" type="button" data-bs-toggle="modal" data-bs-target="#kontrolModal">
                     <div class="card-icon bg-primary">
                         <i class="fas fa-stethoscope"></i>
                     </div>
-                        <div class="card-wrap">
-                            <div class="card-header">
-                                <h4 mx-auto w-100 style="color: black;">Kontrol</h4>
-                                
-                            </div> 
-                            <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Jadwal Kontrol Anda</h4>
-                            </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4 mx-auto w-100 style="color: black;">Jadwal Kontrol</h4>
+
                         </div>
+                        <div class="card-body">
+                            <h4 class="mt-2" style="font-size: x-small;">Jadwal Kontrol ke rumah sakit</h4>
+                        </div>
+                    </div>
                     </a>
-                    
+
                 </div>
             </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="<?= base_url('obatpasien')?>">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-info">
+                            <i class="fas fa-capsules"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Resep obat anda</h4>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Resep obat yang diberikan oleh dokter</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <?php
+
+            
+           date_default_timezone_set('Asia/Jakarta');
+
+            $time=date("h:i:sa");
+            if(date("h")>=$time_limit):
+           ?>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('aktivitaspasien')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-danger">
@@ -48,7 +81,7 @@
                         <div class="card-wrap">
                             <div class="card-header">
                                 <h4 mx-auto w-100 style="color: black;">Aktivitas</h4>
-                                
+
                             </div>
                             <div class="card-body">
                                 <h4 class="mt-2" style="font-size: x-small;">Kegiatan harian anda</h4>
@@ -58,7 +91,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('obatpasien')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-warning">
@@ -66,18 +99,19 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4 mx-auto w-100 style="color: black;">Obat</h4>
-                                
+                                <h4 mx-auto w-100 style="color: black;">Obat yang anda konsumsi</h4>
+
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Obat anda saat ini</h4>
+                                <h4 class="mt-2" style="font-size: x-small;">Memasukan obat-obat yang anda konsumsi
+                                    selama ini</h4>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('dietpasien')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-success">
@@ -86,35 +120,79 @@
                         <div class="card-wrap">
                             <div class="card-header">
                                 <h4 mx-auto w-100 style="color: black;">Menu Diet</h4>
-                                
+
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Makanan yang anda konsumsi</h4>
+                                <h4 class="mt-2" style="font-size: x-small;">Makanan harian yang anda konsumsi</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <?php
+            else:
+            ?>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a data-bs-toggle="modal" data-bs-target="#warning">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-danger">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Aktivitas</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Kegiatan harian anda</h4>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <a href="<?= base_url('obatpasien')?>">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a data-bs-toggle="modal" data-bs-target="#warning">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-warning">
                             <i class="fas fa-capsules"></i>
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4 mx-auto w-100 style="color: black;">Obat</h4>
-                                
+                                <h4 mx-auto w-100 style="color: black;">Obat yang anda konsumsi</h4>
+
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Resep dokter</h4>
+                                <h4 class="mt-2" style="font-size: x-small;">Memasukan obat-obat yang anda konsumsi
+                                    selama ini</h4>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
 
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a data-bs-toggle="modal" data-bs-target="#warning">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-success">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Menu Diet</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Makanan harian yang anda konsumsi</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <?php
+            endif;
+            ?>
 
     </section>
 </div>
@@ -123,20 +201,41 @@
 <div class="modal fade" id="kontrolModal" tabindex="-1" aria-labelledby="kontrolModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="kontrolModalLabel">Jadwal Kontrol Anda</h5>
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-        </div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="kontrolModalLabel">Jadwal Kontrol Anda</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
 
-        <div class="modal-body">
-            Hai pasien, Jadwal kontrol anda pada hari Senin, 8 September 2021. Pukul 13.00 WIB
-        </div>
+            <div class="modal-body">
+                Hai pasien, Jadwal kontrol anda pada hari Senin, 8 September 2021. Pukul 13.00 WIB
+            </div>
 
-        <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Simpan</button>
-            <!-- <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button> -->
-        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Simpan</button>
+                <!-- <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button> -->
+            </div>
         </div>
     </div>
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="warning" tabindex="-1" aria-labelledby="warningLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: red;">
+                <h5 class="modal-title" id="warningLabel" style="color: white;">Pengumuman</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+
+            <div class="modal-body">
+                <h4>Menu ini hanya bisa dibuka pada jam 20.00 WIB</h4>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Mengerti</button>
+                <!-- <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button> -->
+            </div>
+        </div>
+    </div>
+</div>
