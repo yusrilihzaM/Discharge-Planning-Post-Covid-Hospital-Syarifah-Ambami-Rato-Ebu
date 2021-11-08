@@ -17,7 +17,7 @@
             <h1><?=$title;?></h1>
         </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('Nutrisionis/inputmenudiet');?>">
                     <div class="card card-statistic-1">
                             <div class="card-icon bg-success">
@@ -25,10 +25,10 @@
                             </div>
                             <div class="card-wrap">
                                 <div class="card-header">
-                                    <h4>Menu Diet</h4>
+                                    <h4 mx-auto w-100 style="color: black;">Menu Diet</h4>
                                 </div>
                                 <div class="card-body">
-
+                                    <h4 class="mt-2" style="font-size: x-small;">Makanan harian yang anda konsumsi</h4>
                                 </div>
                             </div>
                     </div>

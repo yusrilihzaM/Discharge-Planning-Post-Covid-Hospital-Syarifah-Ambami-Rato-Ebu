@@ -20,7 +20,7 @@
             <h1><?=$title;?></h1>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('Perawat/kontrolperawat');?>">
                     <div class="card card-statistic-1">
                             <div class="card-icon bg-primary">
@@ -38,7 +38,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('obatpasien')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-info">
@@ -57,7 +57,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('Perawat/aktivitasperawat');?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-danger">
@@ -75,7 +75,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('Perawat/inputobat')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-warning">
@@ -93,7 +93,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-success">
