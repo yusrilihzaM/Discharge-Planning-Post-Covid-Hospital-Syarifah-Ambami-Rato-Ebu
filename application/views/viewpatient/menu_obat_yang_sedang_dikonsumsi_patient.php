@@ -69,7 +69,7 @@
         <ul class="nav nav-pills">
 
             <li class="nav-item">
-                <a class="nav-link active" href="<?=base_url()?>ViewPatient/detailpatient/<?=$data['id_patient']?>">Data
+                <a class="nav-link " href="<?=base_url()?>ViewPatient/detailpatient/<?=$data['id_patient']?>">Data
                     Pribadi Pasien</a>
             </li>
             <li class="nav-item">
@@ -77,11 +77,11 @@
                     Deteksi Mandiri</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="<?=base_url()?>ViewPatient/activitypatient/<?=$data['id_patient']?>">Riwayat
+                <a class="nav-link " href="<?=base_url()?>ViewPatient/activitypatient/<?=$data['id_patient']?>">Riwayat
                     Aktifitas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active"
+                <a class="nav-link "
                     href="<?=base_url()?>ViewPatient/historyprescription/<?=$data['id_patient']?>">Riwayat Resep
                     Dokter</a>
             </li>

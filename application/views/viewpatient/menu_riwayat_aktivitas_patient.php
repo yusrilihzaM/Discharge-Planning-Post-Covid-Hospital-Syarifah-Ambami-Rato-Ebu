@@ -40,7 +40,7 @@
         ?>
         <ul class="nav nav-pills">
             <li class="nav-item ">
-                <a class="nav-link active" href="<?=base_url()?>ViewPatient/detailpatient/<?=$data['id_patient']?>">Data
+                <a class="nav-link" href="<?=base_url()?>ViewPatient/detailpatient/<?=$data['id_patient']?>">Data
                     Pribadi Pasien</a>
             </li>
             <li class="nav-item">
@@ -69,7 +69,7 @@
         <ul class="nav nav-pills">
 
             <li class="nav-item">
-                <a class="nav-link active" href="<?=base_url()?>ViewPatient/detailpatient/<?=$data['id_patient']?>">Data
+                <a class="nav-link" href="<?=base_url()?>ViewPatient/detailpatient/<?=$data['id_patient']?>">Data
                     Pribadi Pasien</a>
             </li>
             <li class="nav-item">
