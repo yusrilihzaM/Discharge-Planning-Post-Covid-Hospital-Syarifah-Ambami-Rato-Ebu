@@ -10,7 +10,7 @@
         <div class="modal-dialog modal-lg modal-fullscreen" role="document">
             <div class="modal-content">
                 <div class="modal-header d-flex align-content-center"style="background-color:#c0392b;">
-                    <h5 class="modal-title"  style="text-align: center;color:white;">DISCLAIMER </h5>
+                    <h5 class="modal-title"  style="text-align: center;color:white;">Petunjuk Harian</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
