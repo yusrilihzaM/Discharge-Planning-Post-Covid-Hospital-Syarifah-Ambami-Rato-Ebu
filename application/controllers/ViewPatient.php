@@ -71,6 +71,9 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
         
         }
+        
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
+   
         $data['data']=$this->Pasien_model->get_pasien_byID($id);
         $data['title'] = $data['data']['name_patient'];
         $this->load->view('templates/user/header', $data); 
@@ -100,6 +103,7 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
            
         }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['data']=$this->Pasien_model->get_pasien_byID($id);
         $data['deteksi'] = $this->db->get('assessment_question')->result_array();
         $data['answer'] = $this->AssessmentQuestion_model->get_assessment_answer($id);
@@ -131,6 +135,7 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
            
         }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['data']=$this->Pasien_model->get_pasien_byID($id);
         $id_patient=$data['data']['id_patient'];
         $data['activity_patient'] = $this->db->query("Select * from activity_patient where id_patient=$id_patient order by id_activity_patient")->result_array();
@@ -164,7 +169,7 @@ class ViewPatient extends CI_Controller {
            
         }
        
-        
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['activity_question'] = $this->db->query("Select * from activity_question natural join activity_type order by id_activity_question")->result_array();
         $data['activity_answer'] = $this->db->query("Select * from activity_patient natural join activity_answer where id_activity_patient=$id_activity_patient order by id_activity_patient")->result_array();
         $id_patient=$data['activity_answer'][0]['id_patient'];
@@ -200,6 +205,7 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
            
         }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['data']=$this->Pasien_model->get_pasien_byID($id);
         $id_patient=$data['data']['id_patient'];
         $data['id_patient']=$data['data']['id_patient'];
@@ -235,6 +241,7 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
            
         }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['obat_pagi']=$this->db->query("SELECT * FROM drugs_patient where date_drugs_patient=date_drugs_patient and type='Obat Pagi'")->row_array()['drug'];
         $data['obat_malam']=$this->db->query("SELECT * FROM drugs_patient where date_drugs_patient=date_drugs_patient and type='Obat Malam'")->row_array()['drug'];
         $data['obat_siang']=$this->db->query("SELECT * FROM drugs_patient where date_drugs_patient=date_drugs_patient and type='Obat Siang'")->row_array()['drug'];
@@ -271,6 +278,7 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
            
         }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['data']=$this->Pasien_model->get_pasien_byID($id);
         $id_patient=$data['data']['id_patient'];
         $data['prescription_patient'] = $this->db->query("Select * from prescription_patient where id_patient=$id_patient order by id_prescription_patient asc")->result_array();
@@ -305,6 +313,7 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
            
         }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['data']=$this->Pasien_model->get_pasien_byID($id);
         $data['name_patient']= $data['data']['name_patient'];
         $data['id_user']=$season_user;
@@ -326,7 +335,7 @@ class ViewPatient extends CI_Controller {
             $id_user=$this->input->post('id_user',true);
             $date_prescription_patient=date('Y-m-d H:i:s');
             $prescription=$this->input->post('prescription');
-            $status="Menunggu validasi";
+            $status="Tervalidasi";
             $id_patient1=$this->input->post('id_patient',true);
             $data=[
                "id_user"=>$id_user,
@@ -367,6 +376,7 @@ class ViewPatient extends CI_Controller {
             $data['address'] = $data['user']["address_patient"];
            
         }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
        
         $data['name_patient']= $data['data']['name_patient'];
@@ -392,7 +402,7 @@ class ViewPatient extends CI_Controller {
             $id_user=$this->input->post('id_user',true);
             $date_prescription_patient=date('Y-m-d H:i:s');
             $prescription=$this->input->post('prescription');
-            $status="Menunggu validasi";
+            $status="Tervalidasi";
             $id_patient1=$this->input->post('id_patient',true);
             $data=[
                "id_user"=>$id_user,
@@ -425,7 +435,7 @@ class ViewPatient extends CI_Controller {
         $nama_patient= $data['name_patient'];
         $data['data_resep']=$this->db->query("SELECT * FROM prescription_patient WHERE id_prescription_patient=$id_prescription_patient AND id_patient=$id_patient")->row_array();
         
-      
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
         $this->db->where('id_prescription_patient',$id_prescription_patient);
         $this->db->delete('prescription_patient');
         $this->session->set_flashdata('flash', 'Di hapus');

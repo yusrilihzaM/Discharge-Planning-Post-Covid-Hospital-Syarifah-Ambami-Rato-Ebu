@@ -88,10 +88,10 @@
                                     </td>
                                     <td>
 
-                                        <a class="badge badge-success"
+                                        <!-- <a class="badge badge-success"
                                             href="<?= base_url()?>ViewPatient/detailprescription/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>">
                                             Detail
-                                        </a>
+                                        </a> -->
                                         <a class="badge badge-warning"
                                             href="<?= base_url()?>ViewPatient/updateprescription/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>">
                                             Edit

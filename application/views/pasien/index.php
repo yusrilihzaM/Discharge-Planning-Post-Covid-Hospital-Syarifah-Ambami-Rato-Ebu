@@ -71,7 +71,7 @@
         date_default_timezone_set('Asia/Jakarta');
 
             $time=date("h:i:sa");
-            if(date("h")>=$time_limit):
+            if(date("H")>=$time_limit):
         ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a href="<?= base_url('aktivitaspasien')?>">
