@@ -47,7 +47,7 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <a href="<?= base_url('obatpasien')?>">
+                <a data-bs-toggle="modal" data-bs-target="#resepdokter">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-info">
                             <i class="fas fa-pills"></i>
@@ -266,7 +266,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Simpan</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Mengerti</button>
                 <!-- <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button> -->
             </div>
         </div>
@@ -287,6 +287,44 @@
                 <h4>Menu ini hanya bisa dibuka pada jam 20.00 WIB</h4>
             </div>
 
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Mengerti</button>
+                <!-- <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="resepdokter" tabindex="-1" aria-labelledby="resepdokter" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resepdokterModalLabel">Resep Obat Anda</h5>
+                <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nama Dokter </th>
+                            <th scope="col">:</th>
+                            <th scope="col"><?=$resep_dokter['name']?></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="align-self-lg-center" colspan="3">Resep obat :</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="align-self-lg-center" colspan="3"><?=$resep_dokter['prescription']?></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <label style="color: red;">Obat dapat di beli di apotek terdekat dengan menunjukan resep ini</label>
+            </div>
+           
             <div class="modal-footer">
                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Mengerti</button>
                 <!-- <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button> -->
