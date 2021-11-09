@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12">
             <?php
-                $this->load->view('viewpatient/menu_riwayat_patient');
+                $this->load->view('viewpatient/menu_riwayat_deteksi_patient');
                 ?>
                 <div class="card">
                     <div class="card-body">
