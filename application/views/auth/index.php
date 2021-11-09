@@ -26,6 +26,10 @@
             <div class="d-flex flex-wrap align-items-stretch">
                 <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
                     <div class="p-4 m-3">
+                        <div class="row">
+                            <a href="<?= base_url('Welcome') ?>"><i class="fas fa-sign-out-alt" type="button"> Kembali ke beranda</i></a>
+                        </div>
+                        <br>
                         <img src="<?= base_url() ?>assets/img/rslogo.png" alt="logo" width="70"
                             class="shadow-light mb-5 mt-2">
                         <h4 class="text-dark font-weight-normal">Masuk </h4>
