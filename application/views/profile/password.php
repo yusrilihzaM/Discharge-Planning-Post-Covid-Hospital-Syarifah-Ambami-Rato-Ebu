@@ -48,19 +48,26 @@
                                     <h4>Ganti kata sandi</h4>
                                 </div>
                                 <div class="card-body">
-                            
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <?= $this->session->flashdata('message');?>
+                                        </div>
+                                    </div>
+
                                         <div class="form-group row align-items-center">
                                             <label for="password_lama" class="form-control-label col-sm-3 text-md-right">Password
-                                                lama</label>
-                                            <div class="col-sm-6 col-md-9">
-                                                <input type="password" class="form-control" name="password_lama" id="password_lama"
-                                                    placeholder="Password lama" tabindex="1" required autofocus> 
-                                                
-                                                <div class="invalid-feedback">
-                                                    Silahkan isi password lama anda
+                                                    lama</label>
+                                                <div class="col-sm-6 col-md-9">
+                                                    <input type="password" class="form-control" name="password_lama" id="password_lama"
+                                                        placeholder="Password lama" tabindex="1" required autofocus> 
+                                                    
+                                                    <div class="invalid-feedback">
+                                                        Silahkan isi password lama anda
                                                 </div>
                                             </div>
                                         </div>
+
                                         <div class="form-group row align-items-center">
                                             <label for="password_baru1"
                                                 class="form-control-label col-sm-3 text-md-right">Password baru</label>

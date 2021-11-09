@@ -30,7 +30,7 @@
                             <tbody>
                                 
                                     <th scope="row">1</th>
-                                    <td><img src="assets/img/profil/default.jpg" class="img-thumbnail" style="width:120px;height:120px;"></td>
+                                    <td><img src="<?= base_url('assets/img/profil/default.jpg');?>" class="img-thumbnail" style="width:120px;height:120px;"></td>
                                     <td>
                                         <a href="<?= base_url('Disclaimer/ubah'); ?>" class="badge badge-success">ubah</a>
                                         <a href="<?= base_url(); ?>"
