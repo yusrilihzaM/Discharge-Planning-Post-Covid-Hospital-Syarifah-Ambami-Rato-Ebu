@@ -11,42 +11,9 @@
 
         <div class="row">
             <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="section-title mt-0">Lihat Riwayat Pasien :</div>
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                    href="<?=base_url()?>ViewPatient/detailpatient/<?=$data['id_patient']?>">Data
-                                    Pribadi Pasien</a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link "
-                                    href="<?=base_url()?>ViewPatient/resultdetection/<?=$data['id_patient']?>">Riwayat
-                                    Deteksi Mandiri</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active"
-                                    href="<?=base_url()?>ViewPatient/activitypatient/<?=$data['id_patient']?>">Riwayat
-                                    Aktifitas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="<?=base_url()?>ViewPatient/historyprescription/<?=$data['id_patient']?>">Riwayat
-                                    Resep Dokter</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="<?=base_url()?>ViewPatient/medicine/<?=$data['id_patient']?>">Obat yang sedang
-                                    dikonsumsi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-lin btn btn-outline-danger" href="<?=base_url()?>ViewPatient/addprescription/<?=$data['id_patient']?>"><i
-                                        class="fas fa-file-medical bg-outline-danger"></i> Beri Resep</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <?php
+                $this->load->view('viewpatient/menu_riwayat_aktivitas_patient');
+                ?>
                 <div class="card">
                     <div class="card-body">
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
