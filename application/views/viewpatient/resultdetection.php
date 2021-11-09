@@ -16,16 +16,14 @@
                 ?>
                 <div class="card">
                     <div class="card-body">
-                        <table class="table table-responsive dt-responsive nowrap"
+                    <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Tanggal</th>
                                     <th scope="col">Skor akhir</th>
-                                    <?php foreach ($deteksi as $deteksi) : ?>
-                                    <th scope="col"><?=$deteksi['assessment_question']?></th>
-                                    <?php endforeach; ?>
+                                    <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
                             <?php
@@ -36,19 +34,11 @@
                             <tbody>
                                 <?php foreach ($data as $m) : ?>
                                 <tr>
-                                    <td ><?=$i?></td>
-                                    <td style="width:100px"><?= date('Y-m-d',strtotime($m['date_assessment_patient']))?></td>
-                                    <td><?=$m['total_score']?></td>
-                                <?php
-                                    $menuId = $m['id_assessment_patient'];
-                                    $querySubMenu = "SELECT * FROM assessment_answer WHERE id_assessment_patient=$menuId order by id_assessment_question asc";
-                                    $subMenu = $this->db->query($querySubMenu)->result_array();
-                                ?>
-                                <?php foreach ($subMenu as $x) : ?>
-                                    <td><?= $x['score_answer']?></td>
-                                    <?php endforeach?>
-                                </tr>
-
+                                    <td style="width: 7%;"><?=$i?></td>
+                                    <td ><a href="<?= base_url()?>ViewPatient/detaildetection/<?=$m['id_assessment_patient']?>"><?= date('Y-m-d',strtotime($m['date_assessment_patient']))?></a></td>
+                                    <td ><a href="<?= base_url()?>ViewPatient/detaildetection/<?=$m['id_assessment_patient']?>"><?= $m['total_score']?></a></td>
+                                    <td><a class="badge badge-success" href="<?= base_url()?>ViewPatient/detaildetection/<?=$m['id_assessment_patient']?>">Lihat Detail
+                                            Deteksi Mandiri</a></td>
                                 <?php 
                             $i=$i+1;
                             endforeach; ?>

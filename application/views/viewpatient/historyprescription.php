@@ -22,8 +22,9 @@
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Tanggal dan waktu</th>
+                                    
                                     <th scope="col">Resep</th>
-                                    <th scope="col">Status</th>
+                                   
                                     <th scope="col">Aksi</th>
 
                                 </tr>
@@ -43,16 +44,16 @@
                                     <td style="width: 2%;"><a
                                             href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$i?></a>
                                     </td>
-                                    <td><a
+                                    <td style="width: 7%;"><a
                                             href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$prescription_patient['date_prescription_patient']?></a>
                                     </td>
                                     <td><a
                                             href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$prescription_patient['prescription']?></a>
                                     </td>
-                                    <td><a
+                                    <!-- <td><a
                                             href="<?= base_url()?>ViewPatient/detailresep/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>"><?=$prescription_patient['status']?></a>
-                                    </td>
-                                    <td>
+                                    </td> -->
+                                    <td style="width: 5%;">
 
                                         <!-- <a class="badge badge-success"
                                             href="<?= base_url()?>ViewPatient/detailprescription/<?=$id_patient?>/<?=$prescription_patient['id_prescription_patient']?>">

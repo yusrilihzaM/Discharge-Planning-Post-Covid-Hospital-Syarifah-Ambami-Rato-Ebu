@@ -6,7 +6,7 @@
         <div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
         </div>
         <div class="section-header">
-            <h1>Riwayat Aktifitas : <?=$data['name_patient'];?> - Tanggal : <?=$data['name_patient'];?></h1>
+            <h1>Riwayat Aktifitas : <?=$data['name_patient'];?> - Tanggal : <?=$tanggal;?></h1>
         </div>
 
         <div class="row">

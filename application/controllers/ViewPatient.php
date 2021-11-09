@@ -175,6 +175,7 @@ class ViewPatient extends CI_Controller {
         $id_patient=$data['activity_answer'][0]['id_patient'];
         // var_dump($data['activity_answer']);
         // die;
+        $data['tanggal']=$this->db->query("SELECT * FROM activity_patient where id_activity_patient=$id_activity_patient")->row_array()['date_activity_patient'];
         $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
         $data['id_activity_patient']=$id_activity_patient;
         $data['title'] = $data['data']['name_patient'];
@@ -443,5 +444,44 @@ class ViewPatient extends CI_Controller {
         $this->session->set_flashdata('message', "<div class='alert alert-success' role='alert'>Resep Pasien $nama_patient Telah Di hapus</div>");
         redirect('ViewPatient');
         
+    }
+
+    public function detaildetection($id_assessment_patient){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['date_of_birth'] = $data['user']["date_of_birth"];
+            $data['age'] = $data['user']["age"];
+            $data['address'] = $data['user']["address"];
+            
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+           
+        }
+       $data['id_assessment_patient']=$id_assessment_patient;
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
+        $data['assessment_question'] = $this->db->query("Select * from assessment_question natural join assessment_type order by id_assessment_question")->result_array();
+        $data['assessment_answer'] = $this->db->query("Select * from assessment_patient natural join assessment_answer where id_assessment_patient=$id_assessment_patient order by id_assessment_patient")->result_array();
+        $id_patient=$data['assessment_answer'][0]['id_patient'];
+        // var_dump($data['activity_answer']);
+        // die;
+        $data['tanggal']=$this->db->query("SELECT * FROM assessment_patient where id_assessment_patient=$id_assessment_patient")->row_array()['date_assessment_patient'];
+        $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
+    
+        $data['title'] = $data['data']['name_patient'];
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('viewpatient/detaildetection', $data); 
+        $this->load->view('templates/user/footer', $data); 	
     }
 }
