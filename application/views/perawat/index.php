@@ -15,25 +15,47 @@
     <section class="section">
     <div class="section-header">
             <h1><?=$title;?></h1>
+
         </div>
-            <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <a href="<?= base_url('Dokter/resep')?>">
+
+    <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="<?= base_url('manajemenpasien')?>">
                     <div class="card card-statistic-1">
-                            <div class="card-icon bg-info">
-                                <i class="fas fa-pills"></i>
-                            </div>
+                        <div class="card-icon bg-primary">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
                         <div class="card-wrap">
-                                <div class="card-header">
-                                    <h4 mx-auto w-100 style="color: black;">Resep obat pasien</h4>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="mt-2" style="font-size: x-small;">Resep obat yang diberikan oleh dokter</h4>
-                                </div>
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Manajemen Pasien</h4>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Jadwal Kontrol pasien ke rumah sakit</h4>
+                            </div>
+                            
                         </div>
                     </div>
-                </div>
-            </a> -->
-        </div>
+                </a>
+            </div>
+
+            <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="">
+                    <div class="card card-statistic-1">
+                        <div class="card-icon bg-danger">
+                            <i class="fas fa-walking"></i>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h4 mx-auto w-100 style="color: black;">Lihat aktivitas pasien</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mt-2" style="font-size: x-small;">Kegiatan harian pasien</h4>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
 
     </section>
 </div>

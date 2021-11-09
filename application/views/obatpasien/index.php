@@ -56,11 +56,11 @@
                                             anda lebih dari satu tuliskan semua pada kolom</span></label>
 
                                 </div>
-                                <div class="modal-footer" style="justify-content: center;">
-                                    <button type="submit" class="btn btn-success mr-5"
+                                <div class="col-lg" class="modal-footer" style="justify-content: center;">
+                                    <button type="submit" class="btn btn-success"
                                         data-bs-dismiss="modal">Simpan</button>
-                                    <button type="button" class="btn btn-danger ml-5"
-                                        data-bs-dismiss="modal">Keluar</button>
+                                    <!-- <a href="<?=base_url()?>pasien" style="color: white;" class="btn btn-danger ml-5"
+                                        data-bs-dismiss="modal">Keluar</a> -->
                                 </div>
                             </form>
                         </div>

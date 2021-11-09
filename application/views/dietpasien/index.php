@@ -81,10 +81,12 @@
                                     <label for="" class="mt-3"><span style="color :red">Catatan : Tulis riwayat alergi jika memiliki alergi terhadap menu diet yang telah direkomendasikan. Dan bisa diganti dengan menu diet anda sendiri</span></label>
                             
                                     </div>
-                                        <div class="modal-footer" style="justify-content: center;">
-                                            <button type="button" class="btn btn-success mr-5" data-bs-dismiss="modal">Simpan</button>
-                                            <button type="button" class="btn btn-danger ml-5" data-bs-dismiss="modal">Keluar</button>
-                                        </div>
+                                        <div class="col-lg" class="modal-footer" style="justify-content: center;">
+                                    <button type="submit" class="btn btn-success"
+                                        data-bs-dismiss="modal">Simpan</button>
+                                    <!-- <a href="<?=base_url()?>pasien" style="color: white;" class="btn btn-danger ml-5"
+                                        data-bs-dismiss="modal">Keluar</a> -->
+                                </div>
 
                                 </div>
                             </div>
