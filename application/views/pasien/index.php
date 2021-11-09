@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <a data-bs-toggle="modal" data-bs-target="#resepdokter">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-info">
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div> -->
 
             <?php
 
