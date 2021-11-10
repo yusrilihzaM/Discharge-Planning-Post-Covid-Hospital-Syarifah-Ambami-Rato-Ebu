@@ -788,4 +788,38 @@ class ViewPatient extends CI_Controller {
         redirect('ViewPatient');
         
     }
+
+    public function historyfood($id){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['date_of_birth'] = $data['user']["date_of_birth"];
+            $data['age'] = $data['user']["age"];
+            $data['address'] = $data['user']["address"];
+            
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+           
+        }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
+        $data['data']=$this->Pasien_model->get_pasien_byID($id);
+        $id_patient=$data['data']['id_patient'];
+        $data['id_patient']=$data['data']['id_patient'];
+        $data['diet_patient'] = $this->db->query("Select * from diet_patient natural join m_patient where id_patient=$id_patient order by id_diet_patient asc")->result_array();
+        $data['title'] = $data['data']['name_patient'];
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('viewpatient/historyfood', $data); 
+        $this->load->view('templates/user/footer', $data); 	
+    }
 }

@@ -18,7 +18,7 @@
                             <div class="form-group">
                                 <label>Karbohidrat</label>
 
-                                <textarea class="form-control mb-3" name="carbohydrate" required=""
+                                <textarea class="form-control mb-3 summernote" name="carbohydrate" required=""
                                     placeholder="Contoh: Pilihan menu : Bisa nasi, kentang, ubi, singkong atau jenis makanan yang mengandung karbohidrat"
                                     id="floatingTextarea2" style="height: 100px"></textarea>
 
@@ -30,7 +30,7 @@
                             <div class="form-group">
                                 <label>Protein</label>
 
-                                <textarea class="form-control mb-3" name="protein" required=""
+                                <textarea class="form-control mb-3 summernote" name="protein" required=""
                                     placeholder="Contoh: Pilihan menu : Dada ayam tanpa lemak,Daging tanpa lemak, Telur atau jenis makanan yang mengandung protein"
                                     id="floatingTextarea2" style="height: 100px"></textarea>
                                 <div class="invalid-feedback">
@@ -41,7 +41,7 @@
                             <div class="form-group">
                                 <label>Mineral</label>
 
-                                <textarea class="form-control mb-3" name="mineral" required=""
+                                <textarea class="form-control mb-3 summernote" name="mineral" required=""
                                     placeholder="Contoh: Pilihan menu : Buah dan Sayuran segar" id="floatingTextarea2"
                                     style="height: 100px"></textarea>
                                 <div class="invalid-feedback">
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label>Susu</label>
 
-                                <textarea class="form-control mb-3" name="milks" required=""
+                                <textarea class="form-control mb-3 summernote" name="milks" required=""
                                     placeholder="Pilihan susu yang dikonsumsi bebas. jika memiliki alergi terhadap susu bisa di tulis pada kolom"
                                     id="floatingTextarea2" style="height: 100px"></textarea>
                                 <div class="invalid-feedback">

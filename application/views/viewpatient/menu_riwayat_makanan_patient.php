@@ -48,17 +48,17 @@
                     Deteksi Mandiri</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="<?=base_url()?>ViewPatient/activitypatient/<?=$data['id_patient']?>">Riwayat
+                <a class="nav-link" href="<?=base_url()?>ViewPatient/activitypatient/<?=$data['id_patient']?>">Riwayat
                     Aktifitas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="<?=base_url()?>ViewPatient/historymenu/<?=$data['id_patient']?>">Riwayat Menu
+                <a class="nav-link" href="<?=base_url()?>ViewPatient/historymenu/<?=$data['id_patient']?>">Riwayat Menu
                     Diet</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?=base_url()?>ViewPatient/historyfood/<?=$data['id_patient']?>">Riwayat Makanan Diet</a>
+                <a class="nav-link active" href="<?=base_url()?>ViewPatient/historyfood/<?=$data['id_patient']?>">Riwayat Makanan Diet</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ml-2">
                 <a class="nav-lin btn btn-outline-danger"
                     href="<?=base_url()?>ViewPatient/adddietmenu/<?=$data['id_patient']?>"><i
                         class="fas fa-file-medical bg-outline-danger"></i> Beri Menu Diet</a>

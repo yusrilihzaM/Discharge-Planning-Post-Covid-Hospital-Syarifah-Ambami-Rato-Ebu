@@ -17,7 +17,7 @@ $(document).ready(function() {
             </div>
             <div class="modal-body">
 
-                <table class="table table-bordered table-responsive-md dt-responsive nowrap"
+                <table class="table table-bordered table-responsive-md"
                     style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                     <thead>
                         <tr>
@@ -42,9 +42,6 @@ $(document).ready(function() {
                                 $querySubMenu = "SELECT * from activity_question WHERE id_activity_type= $menuId";
                                 $subMenu = $this->db->query($querySubMenu)->result_array();      
                             ?>
-
-
-
                                 <ul>
                                     <?php foreach ($subMenu as $sm) : ?>
                                     <li><?= $sm['activity_question']; ?></li>
@@ -64,13 +61,13 @@ $(document).ready(function() {
                             </td>
                             <td>
                                 <h6>Menu Makanan:</h6>
-                                <label>Karbohidrat:</label><br>
+                                <h7>Karbohidrat:</h7>
                                 <?=$menu_diet['carbohydrate']?>
-                                <br><label>Protein    :</label><br>
+                                <h7>Protein    :</h7>
                                 <?=$menu_diet['protein']?>
-                                <br><label>Mineral    :</label><br>
+                                <h7>Mineral    :</h7>
                                 <?=$menu_diet['mineral']?>
-                                <br><label>Susu       :</label><br>
+                                <h7>Susu       :</h7>
                                 <?=$menu_diet['milks']?>
                             </td>
                         </tr>

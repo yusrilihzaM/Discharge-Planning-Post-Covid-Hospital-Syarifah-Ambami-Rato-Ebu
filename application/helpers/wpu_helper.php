@@ -2,6 +2,7 @@
 
 function is_logged_in()
 {
+    date_default_timezone_set('Asia/Jakarta');
     $ci = get_instance();
     $season_user=$ci->session->userdata('id_user');
     $season_patient=$ci->session->userdata('id_patient');

@@ -23,7 +23,7 @@
                         <div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
                         </div>
 
-                        <!-- <a href="<?= base_url()?>ControlPatient/add" class="btn btn-primary mb-3">Tambah menu baru</a> -->
+                        <a href="<?= base_url()?>ControlPatient/add/<?=$id_patient?>" class="btn btn-primary mb-3">Buat Jadwal Kontrol</a>
 
                         <table id="datatable" class="table table-striped table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -32,7 +32,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Nomor Rekam Medis</th>
                                     <th scope="col">Nama Pasien</th>
-                                    
+                                    <th scope="col">Tanggal Kontrol</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -45,19 +45,20 @@
                                     <td><?=$i?></td>
                                     <td><?=$data['id_patient']?></td>
                                     <td><?=$data['name_patient']?></td>
+                                    <td><?=$data['date_control_patient']?></td>
                                     <td>
+                                        <a class="badge badge-warning"
+                                            href="<?= base_url()?>ControlPatient/edit/<?=$data['id_control_patient']?>">
+                                            Edit
+                                        </a>
                                         <!-- <a class="badge badge-success"
-                                            href="<?= base_url()?>ControlPatient/detail/<?=$data['id_control_patient']?>">
-                                            Detail
-                                        </a> -->
-                                        <a class="badge badge-success"
                                             href="<?= base_url()?>ControlPatient/history/<?=$data['id_patient']?>">
                                             Lihat Riwayat Jadwal Kontrol
-                                        </a>
-                                        <!-- <a class="badge badge-danger"
+                                        </a> -->
+                                        <a class="badge badge-danger"
                                         href="<?= base_url()?>ControlPatient/delete/<?=$data['id_control_patient']?>">
                                             Hapus
-                                        </a></td> -->
+                                        </a></td>
                                 </tr>
                                 <?php
                                 endforeach

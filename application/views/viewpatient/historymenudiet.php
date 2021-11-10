@@ -40,7 +40,7 @@
                                 <tr>
                                
                                     <td><a href="<?= base_url()?>ViewPatient/detailnutrisionis/<?=$id_patient?>/<?=$nutrisionis_patient['id_diet_nutrisionist']?>"><?=$i?></a></td>
-                                    <td><a href="<?= base_url()?>ViewPatient/detailnutrisionis/<?=$id_patient?>/<?=$nutrisionis_patient['name']?>"><?=$i?></a></td>
+                                    <td><a href="<?= base_url()?>ViewPatient/detailnutrisionis/<?=$id_patient?>/<?=$nutrisionis_patient['id_diet_nutrisionist']?>"><?=$nutrisionis_patient['name']?></a></td>
                                     <td><a
                                             href="<?= base_url()?>ViewPatient/detailnutrisionis/<?=$id_patient?>/<?=$nutrisionis_patient['id_diet_nutrisionist']?>"><?=$nutrisionis_patient['date_diet_nutrisionist']?></a>
                                     </td>
