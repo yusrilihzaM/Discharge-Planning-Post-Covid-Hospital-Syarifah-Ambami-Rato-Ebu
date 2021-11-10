@@ -35,16 +35,16 @@
                                 <?php foreach ($subMenu as $sm) : ?>
                                 <div class="form-check">
                                     <div class="row" >
-                                        <div class="col">
+                                        <div class="col-md-7">
                                         <ul style="background-color: white;">
                                             <li class="mb-2" ><?= $sm['assessment_question']; ?></li>
                                         </ul>
                                         </div>
-                                        <div class="col-md-2">
-                                            <div class="form-check">
-                                            <ul style="background-color: white;">
+                                        <div class="col-sm-1">
+                                            <div class="form-check" style="background-color: white;">
+                                          
                                             <p class="mb-2" ><?= $sm['score_answer']; ?></p>
-                                        </ul>
+                                       
                                             </div>
 
                                         </div>

@@ -29,7 +29,7 @@
                             <?php
                             $id_patient=$data['id_patient'];
                             $i=1;
-                            $data=$this->db->query("SELECT * FROM assessment_patient where id_patient=$id_patient")->result_array();
+                            $data=$this->db->query("SELECT * FROM assessment_patient where id_patient=$id_patient order by date_assessment_patient desc")->result_array();
                             ?>
                             <tbody>
                                 <?php foreach ($data as $m) : ?>

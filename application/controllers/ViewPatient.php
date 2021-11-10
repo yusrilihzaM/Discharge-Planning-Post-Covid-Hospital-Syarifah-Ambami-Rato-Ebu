@@ -484,4 +484,49 @@ class ViewPatient extends CI_Controller {
         $this->load->view('viewpatient/detaildetection', $data); 
         $this->load->view('templates/user/footer', $data); 	
     }
+    public function detailresep(){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        $id_patient=$this->uri->segment(3);
+        $id_prescription_patient= $this->uri->segment(4);
+        
+       
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['date_of_birth'] = $data['user']["date_of_birth"];
+            $data['age'] = $data['user']["age"];
+            $data['address'] = $data['user']["address"];
+            
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+           
+        }
+        
+        $data['id_prescription_patient']=$id_prescription_patient;
+
+       
+        $data['prescription_patient'] = $this->db->query("Select * from prescription_patient natural join m_user  where id_prescription_patient=$id_prescription_patient order by id_prescription_patient")->row_array();
+        $data['data_patient'] = $this->db->query("Select * from prescription_patient natural join m_patient  where id_prescription_patient=$id_prescription_patient and id_patient=$id_patient  order by id_prescription_patient")->row_array();
+        $id_patient=$data['prescription_patient']['id_patient'];
+       
+        // var_dump($data['activity_answer']);
+        // die;
+        
+        $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
+    
+        $data['title'] = $data['data']['name_patient'];
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('viewpatient/detailprescription', $data); 
+        $this->load->view('templates/user/footer', $data); 	
+    }
 }
