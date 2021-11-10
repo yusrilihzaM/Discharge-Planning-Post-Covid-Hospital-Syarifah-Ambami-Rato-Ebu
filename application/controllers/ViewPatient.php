@@ -529,4 +529,305 @@ class ViewPatient extends CI_Controller {
         $this->load->view('viewpatient/detailprescription', $data); 
         $this->load->view('templates/user/footer', $data); 	
     }
+
+    public function adddietmenu($id_patient){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+       
+      
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['date_of_birth'] = $data['user']["date_of_birth"];
+            $data['age'] = $data['user']["age"];
+            $data['address'] = $data['user']["address"];
+            
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+           
+        }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
+        $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
+        $data['name_patient']= $data['data']['name_patient'];
+      
+        $data['id_user']=$season_user;
+        $idpatient=$data['data']['id_patient'];
+      
+        $data['title'] = $data['data']['name_patient'];
+        $nama_patient= $data['name_patient'];
+        $this->form_validation->set_rules('carbohydrate_morning', 'carbohydrate_morning', 'trim');
+        $this->form_validation->set_rules('carbohydrate_afternoon', 'carbohydrate_afternoon', 'trim');
+        $this->form_validation->set_rules('carbohydrate_evening', 'carbohydrate_evening', 'trim');
+        $this->form_validation->set_rules('protein_morning', 'protein_morning', 'trim');
+
+        $this->form_validation->set_rules('protein_afternoon', 'protein_afternoon', 'trim');
+        $this->form_validation->set_rules('protein_evening', 'protein_evening', 'trim');
+        $this->form_validation->set_rules('mineral_morning', 'mineral_morning', 'trim');
+        $this->form_validation->set_rules('mineral_afternoon', 'mineral_afternoon', 'trim');
+
+        $this->form_validation->set_rules('mineral_evening', 'mineral_evening', 'trim');
+        $this->form_validation->set_rules('milks_morning', 'milks_morning', 'trim');
+        $this->form_validation->set_rules('milks_afternoon', 'milks_afternoon', 'trim');
+        $this->form_validation->set_rules('milks_evening', 'milks_evening', 'trim');
+        if($this->form_validation->run() == false){
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('viewpatient/addmenudiet', $data); 
+        $this->load->view('templates/user/footer', $data); 	
+        }
+        else{
+            $id_patient=$idpatient;
+            $id_user=$season_user;
+            $date_diet_nutrisionist=date("Y-m-d");
+            $carbohydrate_morning=$this->input->post('carbohydrate_morning',true);
+            $carbohydrate_afternoon=$this->input->post('carbohydrate_afternoon',true);
+            $carbohydrate_evening=$this->input->post('carbohydrate_evening',true);
+            $protein_morning=$this->input->post('protein_morning',true);
+            $protein_afternoon=$this->input->post('protein_afternoon',true);
+            $protein_evening=$this->input->post('protein_evening',true);
+            $mineral_morning=$this->input->post('mineral_morning',true);
+            $mineral_afternoon=$this->input->post('mineral_afternoon',true);
+            $mineral_evening=$this->input->post('mineral_evening',true);
+            $milks_morning=$this->input->post('milks_morning',true);
+            $milks_afternoon=$this->input->post('milks_afternoon',true);
+            $milks_evening=$this->input->post('milks_evening',true);
+          
+
+            $data=[
+               "id_patient"=>$id_patient,
+               "date_diet_nutrisionist"=>$date_diet_nutrisionist,
+               "carbohydrate_morning"=>$carbohydrate_morning,
+               "carbohydrate_afternoon"=>$carbohydrate_afternoon,
+               "carbohydrate_evening"=>$carbohydrate_evening,
+               "protein_morning"=>$protein_morning,
+               "protein_afternoon"=>$protein_afternoon,
+               "protein_evening"=>$protein_evening,
+               "mineral_morning"=>$mineral_morning,
+               "mineral_afternoon"=>$mineral_afternoon,
+               "mineral_evening"=>$mineral_evening,
+               "milks_morning"=>$milks_morning,
+               "milks_afternoon"=>$milks_afternoon,
+               "milks_evening"=>$milks_evening,
+               "id_user"=>$id_user
+           ];
+           $this->db->insert("diet_nutrisionist",$data);
+           $this->session->set_flashdata('flash', 'Di buat');
+           $this->session->set_flashdata('data', 'Menu Diet');
+       
+           $this->session->set_flashdata('message', "<div class='alert alert-success' role='alert'>Menu Diet $nama_patient Telah Dibuat</div>");
+           redirect('ViewPatient');
+        }
+    }
+    public function editnutrisionis($id_patient){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        $id_patient=$this->uri->segment(3);
+        $id_diet_nutrisionist= $this->uri->segment(4);
+      
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['date_of_birth'] = $data['user']["date_of_birth"];
+            $data['age'] = $data['user']["age"];
+            $data['address'] = $data['user']["address"];
+            
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+           
+        }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
+        $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
+        $data['name_patient']= $data['data']['name_patient'];
+      
+        $data['id_user']=$season_user;
+        $idpatient=$data['data']['id_patient'];
+        $data['diet_nutrisionist'] = $this->db->query("Select * from diet_nutrisionist natural join m_user  where id_diet_nutrisionist=$id_diet_nutrisionist order by id_diet_nutrisionist")->row_array();
+        $data['data_patient'] = $this->db->query("Select * from diet_nutrisionist natural join m_patient  where id_diet_nutrisionist=$id_diet_nutrisionist and id_patient=$id_patient  order by id_diet_nutrisionist")->row_array();
+        $id_patient=$data['diet_nutrisionist']['id_patient'];
+        $data['title'] = $data['data']['name_patient'];
+        $nama_patient= $data['name_patient'];
+        $this->form_validation->set_rules('carbohydrate_morning', 'carbohydrate_morning', 'trim');
+        $this->form_validation->set_rules('carbohydrate_afternoon', 'carbohydrate_afternoon', 'trim');
+        $this->form_validation->set_rules('carbohydrate_evening', 'carbohydrate_evening', 'trim');
+        $this->form_validation->set_rules('protein_morning', 'protein_morning', 'trim');
+
+        $this->form_validation->set_rules('protein_afternoon', 'protein_afternoon', 'trim');
+        $this->form_validation->set_rules('protein_evening', 'protein_evening', 'trim');
+        $this->form_validation->set_rules('mineral_morning', 'mineral_morning', 'trim');
+        $this->form_validation->set_rules('mineral_afternoon', 'mineral_afternoon', 'trim');
+
+        $this->form_validation->set_rules('mineral_evening', 'mineral_evening', 'trim');
+        $this->form_validation->set_rules('milks_morning', 'milks_morning', 'trim');
+        $this->form_validation->set_rules('milks_afternoon', 'milks_afternoon', 'trim');
+        $this->form_validation->set_rules('milks_evening', 'milks_evening', 'trim');
+        if($this->form_validation->run() == false){
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('viewpatient/editmenudiet', $data); 
+        $this->load->view('templates/user/footer', $data); 	
+        }
+        else{
+            $id_patient=$idpatient;
+            $id_user=$season_user;
+            $date_diet_nutrisionist=date("Y-m-d");
+            $id_diet_nutrisionist=$this->input->post('id_diet_nutrisionist',true);
+            $carbohydrate_morning=$this->input->post('carbohydrate_morning',true);
+            $carbohydrate_afternoon=$this->input->post('carbohydrate_afternoon',true);
+            $carbohydrate_evening=$this->input->post('carbohydrate_evening',true);
+            $protein_morning=$this->input->post('protein_morning',true);
+            $protein_afternoon=$this->input->post('protein_afternoon',true);
+            $protein_evening=$this->input->post('protein_evening',true);
+            $mineral_morning=$this->input->post('mineral_morning',true);
+            $mineral_afternoon=$this->input->post('mineral_afternoon',true);
+            $mineral_evening=$this->input->post('mineral_evening',true);
+            $milks_morning=$this->input->post('milks_morning',true);
+            $milks_afternoon=$this->input->post('milks_afternoon',true);
+            $milks_evening=$this->input->post('milks_evening',true);
+          
+
+            $data=[
+               "id_patient"=>$id_patient,
+               "date_diet_nutrisionist"=>$date_diet_nutrisionist,
+               "carbohydrate_morning"=>$carbohydrate_morning,
+               "carbohydrate_afternoon"=>$carbohydrate_afternoon,
+               "carbohydrate_evening"=>$carbohydrate_evening,
+               "protein_morning"=>$protein_morning,
+               "protein_afternoon"=>$protein_afternoon,
+               "protein_evening"=>$protein_evening,
+               "mineral_morning"=>$mineral_morning,
+               "mineral_afternoon"=>$mineral_afternoon,
+               "mineral_evening"=>$mineral_evening,
+               "milks_morning"=>$milks_morning,
+               "milks_afternoon"=>$milks_afternoon,
+               "milks_evening"=>$milks_evening,
+               "id_user"=>$id_user
+           ];
+           $this->db->where("id_diet_nutrisionist",$id_diet_nutrisionist);
+           $this->db->update("diet_nutrisionist",$data);
+           $this->session->set_flashdata('flash', 'Di buat');
+           $this->session->set_flashdata('data', 'Menu Diet');
+       
+           $this->session->set_flashdata('message', "<div class='alert alert-success' role='alert'>Menu Diet $nama_patient Telah Di Perbarui</div>");
+           redirect('ViewPatient');
+        }
+    }
+    public function historymenu($id){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['date_of_birth'] = $data['user']["date_of_birth"];
+            $data['age'] = $data['user']["age"];
+            $data['address'] = $data['user']["address"];
+            
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+           
+        }
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
+        $data['data']=$this->Pasien_model->get_pasien_byID($id);
+        $id_patient=$data['data']['id_patient'];
+        $data['nutrisionis_patient'] = $this->db->query("Select * from diet_nutrisionist natural join m_user where id_patient=$id_patient order by id_diet_nutrisionist asc")->result_array();
+        $data['title'] = $data['data']['name_patient'];
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('viewpatient/historymenudiet', $data); 
+        $this->load->view('templates/user/footer', $data); 	
+    }
+
+    public function detailnutrisionis(){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        $id_patient=$this->uri->segment(3);
+        $id_diet_nutrisionist= $this->uri->segment(4);
+        
+       
+        if($season_user){
+            $data['user'] = $this->db->query("Select * FROM m_user natural join role where id_user=$season_user")->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+            $data['role'] = $data['user']["role"];
+            $data['date_of_birth'] = $data['user']["date_of_birth"];
+            $data['age'] = $data['user']["age"];
+            $data['address'] = $data['user']["address"];
+            
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
+            // $data['user'] = $this->db->query("Select * FROM m_patient natural join role natural join m_provinsi natural join m_kab_kota natural join m_kecamatan natural join m_kelurahan ")->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+            $data['role'] = $data['user']["role"];
+            $data['age'] = $data['user']["age_patient"];
+            $data['address'] = $data['user']["address_patient"];
+           
+        }
+        
+        $data['id_diet_nutrisionist']=$id_diet_nutrisionist;
+
+       
+        $data['diet_nutrisionist'] = $this->db->query("Select * from diet_nutrisionist natural join m_user  where id_diet_nutrisionist=$id_diet_nutrisionist order by id_diet_nutrisionist")->row_array();
+        $data['data_patient'] = $this->db->query("Select * from diet_nutrisionist natural join m_patient  where id_diet_nutrisionist=$id_diet_nutrisionist and id_patient=$id_patient  order by id_diet_nutrisionist")->row_array();
+        $id_patient=$data['diet_nutrisionist']['id_patient'];
+       
+        // var_dump($data['activity_answer']);
+        // die;
+        
+        $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
+    
+        $data['title'] = $data['data']['name_patient'];
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('viewpatient/detailnutrisionis', $data); 
+        $this->load->view('templates/user/footer', $data); 	
+    }
+
+
+    public function hapusnutrisionis(){
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        $id_patient=$this->uri->segment(3);
+        $id_diet_nutrisionist= $this->uri->segment(4);
+      
+        $data['data']=$this->Pasien_model->get_pasien_byID($id_patient);
+       
+        $data['name_patient']= $data['data']['name_patient'];
+        $data['id_user']=$season_user;
+        $id_patient=$data['data']['name_patient'];
+        $nama_patient= $data['name_patient'];
+        $data['data_resep']=$this->db->query("SELECT * FROM diet_nutrisionist WHERE id_diet_nutrisionist=$id_diet_nutrisionist AND id_patient=$id_patient")->row_array();
+        
+        $data['cek_user']=$this->db->query("SELECT * FROM m_user NATURAL JOIN role where id_user=$season_user")->row_array();
+        $this->db->where('id_diet_nutrisionist',$id_diet_nutrisionist);
+        $this->db->delete('diet_nutrisionist');
+        $this->session->set_flashdata('flash', 'Di hapus');
+        $this->session->set_flashdata('data', 'Resep Obat');
+        $this->session->set_flashdata('message', "<div class='alert alert-success' role='alert'>Menu pasien $nama_patient Telah Di hapus</div>");
+        redirect('ViewPatient');
+        
+    }
 }
