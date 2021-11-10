@@ -562,20 +562,14 @@ class ViewPatient extends CI_Controller {
       
         $data['title'] = $data['data']['name_patient'];
         $nama_patient= $data['name_patient'];
-        $this->form_validation->set_rules('carbohydrate_morning', 'carbohydrate_morning', 'trim');
-        $this->form_validation->set_rules('carbohydrate_afternoon', 'carbohydrate_afternoon', 'trim');
-        $this->form_validation->set_rules('carbohydrate_evening', 'carbohydrate_evening', 'trim');
-        $this->form_validation->set_rules('protein_morning', 'protein_morning', 'trim');
+        $this->form_validation->set_rules('carbohydrate', 'carbohydrate', 'trim');
+       
+        $this->form_validation->set_rules('protein', 'protein', 'trim');
 
-        $this->form_validation->set_rules('protein_afternoon', 'protein_afternoon', 'trim');
-        $this->form_validation->set_rules('protein_evening', 'protein_evening', 'trim');
-        $this->form_validation->set_rules('mineral_morning', 'mineral_morning', 'trim');
-        $this->form_validation->set_rules('mineral_afternoon', 'mineral_afternoon', 'trim');
+        $this->form_validation->set_rules('mineral', 'mineral', 'trim');
+        
+        $this->form_validation->set_rules('milks', 'milks', 'trim');
 
-        $this->form_validation->set_rules('mineral_evening', 'mineral_evening', 'trim');
-        $this->form_validation->set_rules('milks_morning', 'milks_morning', 'trim');
-        $this->form_validation->set_rules('milks_afternoon', 'milks_afternoon', 'trim');
-        $this->form_validation->set_rules('milks_evening', 'milks_evening', 'trim');
         if($this->form_validation->run() == false){
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
@@ -587,35 +581,21 @@ class ViewPatient extends CI_Controller {
             $id_patient=$idpatient;
             $id_user=$season_user;
             $date_diet_nutrisionist=date("Y-m-d");
-            $carbohydrate_morning=$this->input->post('carbohydrate_morning',true);
-            $carbohydrate_afternoon=$this->input->post('carbohydrate_afternoon',true);
-            $carbohydrate_evening=$this->input->post('carbohydrate_evening',true);
-            $protein_morning=$this->input->post('protein_morning',true);
-            $protein_afternoon=$this->input->post('protein_afternoon',true);
-            $protein_evening=$this->input->post('protein_evening',true);
-            $mineral_morning=$this->input->post('mineral_morning',true);
-            $mineral_afternoon=$this->input->post('mineral_afternoon',true);
-            $mineral_evening=$this->input->post('mineral_evening',true);
-            $milks_morning=$this->input->post('milks_morning',true);
-            $milks_afternoon=$this->input->post('milks_afternoon',true);
-            $milks_evening=$this->input->post('milks_evening',true);
-          
-
+            $carbohydrate=$this->input->post('carbohydrate',true);
+            $protein=$this->input->post('protein',true);
+            $mineral=$this->input->post('mineral',true);
+            $milks=$this->input->post('milks',true);
             $data=[
                "id_patient"=>$id_patient,
                "date_diet_nutrisionist"=>$date_diet_nutrisionist,
-               "carbohydrate_morning"=>$carbohydrate_morning,
-               "carbohydrate_afternoon"=>$carbohydrate_afternoon,
-               "carbohydrate_evening"=>$carbohydrate_evening,
-               "protein_morning"=>$protein_morning,
-               "protein_afternoon"=>$protein_afternoon,
-               "protein_evening"=>$protein_evening,
-               "mineral_morning"=>$mineral_morning,
-               "mineral_afternoon"=>$mineral_afternoon,
-               "mineral_evening"=>$mineral_evening,
-               "milks_morning"=>$milks_morning,
-               "milks_afternoon"=>$milks_afternoon,
-               "milks_evening"=>$milks_evening,
+               "carbohydrate"=>$carbohydrate,
+              
+               "protein"=>$protein,
+            
+               "mineral"=>$mineral,
+             
+               "milks"=>$milks,
+              
                "id_user"=>$id_user
            ];
            $this->db->insert("diet_nutrisionist",$data);
@@ -661,20 +641,13 @@ class ViewPatient extends CI_Controller {
         $id_patient=$data['diet_nutrisionist']['id_patient'];
         $data['title'] = $data['data']['name_patient'];
         $nama_patient= $data['name_patient'];
-        $this->form_validation->set_rules('carbohydrate_morning', 'carbohydrate_morning', 'trim');
-        $this->form_validation->set_rules('carbohydrate_afternoon', 'carbohydrate_afternoon', 'trim');
-        $this->form_validation->set_rules('carbohydrate_evening', 'carbohydrate_evening', 'trim');
-        $this->form_validation->set_rules('protein_morning', 'protein_morning', 'trim');
+        $this->form_validation->set_rules('carbohydrate', 'carbohydrate', 'trim');
+       
+        $this->form_validation->set_rules('protein', 'protein', 'trim');
 
-        $this->form_validation->set_rules('protein_afternoon', 'protein_afternoon', 'trim');
-        $this->form_validation->set_rules('protein_evening', 'protein_evening', 'trim');
-        $this->form_validation->set_rules('mineral_morning', 'mineral_morning', 'trim');
-        $this->form_validation->set_rules('mineral_afternoon', 'mineral_afternoon', 'trim');
-
-        $this->form_validation->set_rules('mineral_evening', 'mineral_evening', 'trim');
-        $this->form_validation->set_rules('milks_morning', 'milks_morning', 'trim');
-        $this->form_validation->set_rules('milks_afternoon', 'milks_afternoon', 'trim');
-        $this->form_validation->set_rules('milks_evening', 'milks_evening', 'trim');
+        $this->form_validation->set_rules('mineral', 'mineral', 'trim');
+        
+        $this->form_validation->set_rules('milks', 'milks', 'trim');
         if($this->form_validation->run() == false){
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
@@ -686,36 +659,21 @@ class ViewPatient extends CI_Controller {
             $id_patient=$idpatient;
             $id_user=$season_user;
             $date_diet_nutrisionist=date("Y-m-d");
-            $id_diet_nutrisionist=$this->input->post('id_diet_nutrisionist',true);
-            $carbohydrate_morning=$this->input->post('carbohydrate_morning',true);
-            $carbohydrate_afternoon=$this->input->post('carbohydrate_afternoon',true);
-            $carbohydrate_evening=$this->input->post('carbohydrate_evening',true);
-            $protein_morning=$this->input->post('protein_morning',true);
-            $protein_afternoon=$this->input->post('protein_afternoon',true);
-            $protein_evening=$this->input->post('protein_evening',true);
-            $mineral_morning=$this->input->post('mineral_morning',true);
-            $mineral_afternoon=$this->input->post('mineral_afternoon',true);
-            $mineral_evening=$this->input->post('mineral_evening',true);
-            $milks_morning=$this->input->post('milks_morning',true);
-            $milks_afternoon=$this->input->post('milks_afternoon',true);
-            $milks_evening=$this->input->post('milks_evening',true);
-          
-
+            $carbohydrate=$this->input->post('carbohydrate',true);
+            $protein=$this->input->post('protein',true);
+            $mineral=$this->input->post('mineral',true);
+            $milks=$this->input->post('milks',true);
             $data=[
                "id_patient"=>$id_patient,
                "date_diet_nutrisionist"=>$date_diet_nutrisionist,
-               "carbohydrate_morning"=>$carbohydrate_morning,
-               "carbohydrate_afternoon"=>$carbohydrate_afternoon,
-               "carbohydrate_evening"=>$carbohydrate_evening,
-               "protein_morning"=>$protein_morning,
-               "protein_afternoon"=>$protein_afternoon,
-               "protein_evening"=>$protein_evening,
-               "mineral_morning"=>$mineral_morning,
-               "mineral_afternoon"=>$mineral_afternoon,
-               "mineral_evening"=>$mineral_evening,
-               "milks_morning"=>$milks_morning,
-               "milks_afternoon"=>$milks_afternoon,
-               "milks_evening"=>$milks_evening,
+               "carbohydrate"=>$carbohydrate,
+              
+               "protein"=>$protein,
+            
+               "mineral"=>$mineral,
+             
+               "milks"=>$milks,
+              
                "id_user"=>$id_user
            ];
            $this->db->where("id_diet_nutrisionist",$id_diet_nutrisionist);

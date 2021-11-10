@@ -26,8 +26,8 @@ class Pasien extends CI_Controller {
         $data['time_limit']='20';
         $data['jadwal_kontrol_terbaru']=$this->db->query("SELECT * FROM control_patient NATURAL JOIN m_patient WHERE id_patient=$season_patient ORDER BY id_control_patient DESC LIMIT 1")->row_array();
         $data['resep_dokter']=$this->db->query("SELECT * FROM prescription_patient NATURAL JOIN m_user WHERE id_patient=$season_patient ORDER BY id_prescription_patient DESC LIMIT 1")->row_array();
-        
-       
+        $data['menu_diet']=$this->db->query("SELECT * FROM diet_nutrisionist NATURAL JOIN m_patient WHERE id_patient=$season_patient ORDER BY id_diet_nutrisionist DESC LIMIT 1")->row_array();
+      
         $this->load->view('templates/user/header', $data); 
 		$this->load->view('templates/user/navbar', $data); 	
         $this->load->view('templates/user/left_menu', $data); 	

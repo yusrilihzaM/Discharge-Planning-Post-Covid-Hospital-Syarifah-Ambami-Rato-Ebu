@@ -12,92 +12,37 @@
                     </div>
                     <div class="card-body">
                         <form method="POST" action="" class="needs-validation" novalidate="">
-                            <label><span style="font-size:medium">Sarapan Pagi</span></label>
+                            <label><span style="font-size:medium">Sarapan</span></label>
 
 
                             <div class="form-group">
-                                <label>Karbohidrat pagi</label>
+                                <label>Karbohidrat</label>
                                 <p>
-                                    <?=$diet_nutrisionist['carbohydrate_morning']?></p>
+                                    <?=$diet_nutrisionist['carbohydrate']?></p>
 
                             </div>
 
                             <div class="form-group">
-                                <label>Protein pagi</label>
+                                <label>Protein</label>
                                 <p>
-                                    <?=$diet_nutrisionist['protein_morning']?>
+                                    <?=$diet_nutrisionist['protein']?>
                                     </p>
                             </div>
 
                             <div class="form-group">
-                                <label> Mineral pagi</label>
+                                <label> Mineral</label>
                                 <p>
-                                    <?=$diet_nutrisionist['mineral_morning']?></p>
+                                    <?=$diet_nutrisionist['mineral']?></p>
 
                             </div>
 
                             <div class="form-group">
-                                <label>Susu pagi</label>
+                                <label>Susu</label>
                                 <p>
-                                    <?=$diet_nutrisionist['milks_morning']?></p>
+                                    <?=$diet_nutrisionist['milks']?></p>
 
                             </div>
-                            <label for=""><span style="font-size:medium">Makan Siang</span></label>
-                            <p>
-                            <div class="form-group">
-                                <label> Karbohidrat siang</label>
-                                <p>
-
-                                    <?=$diet_nutrisionist['carbohydrate_afternoon']?> </p>
-                            </div>
-
-                            <div class="form-group">
-                                <label> Protein siang</label>
-                                <p>
-
-                                    <?=$diet_nutrisionist['protein_afternoon']?> </p>
-                            </div>
-
-                            <div class="form-group">
-                                <label> Mineral siang</label>
-                                <p>
-                                    <?=$diet_nutrisionist['mineral_afternoon']?></p>
-
-                            </div>
-
-                            <div class="form-group">
-                                <label>Susu siang</label>
-                                <p>
-                                    <?=$diet_nutrisionist['milks_afternoon']?></p>
-
-                            </div>
-                            <label for=""><span style="font-size:medium">Makan Sore</span></label>
-                            <p>
-                            <div class="form-group">
-                                <label> Karbohidrat sore</label>
-                                <p>
-                                    <?=$diet_nutrisionist['carbohydrate_evening']?></p>
-
-                            </div>
-                            <div class="form-group">
-                                <label>Protein sore</label>
-                                <p>
-                                    <?=$diet_nutrisionist['protein_evening']?> </p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Mineral sore</label>
-                                <p>
-
-                                    <?=$diet_nutrisionist['mineral_evening']?> </p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Susu sore</label>
-                                <p>
-
-                                    <?=$diet_nutrisionist['milks_evening']?> </p>
-                            </div>
+                            
 
                             
                         </form>
