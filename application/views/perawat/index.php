@@ -30,32 +30,34 @@
                                 <h4 mx-auto w-100 style="color: black;">Manajemen Pasien</h4>
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Jadwal Kontrol pasien ke rumah sakit</h4>
+                                <h4 class="mt-2" style="font-size: x-small;"></h4>
                             </div>
                             
                         </div>
                     </div>
                 </a>
+
+                
             </div>
 
-            <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <a href="">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <a href="<?= base_url('viewpatient')?>">
                     <div class="card card-statistic-1">
                         <div class="card-icon bg-danger">
-                            <i class="fas fa-walking"></i>
+                            <i class="fas fa-search"></i> 
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4 mx-auto w-100 style="color: black;">Lihat aktivitas pasien</h4>
+                                <h4 mx-auto w-100 style="color: black;">Lihat Pasien</h4>
 
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;">Kegiatan harian pasien</h4>
+                                <h4 class="mt-2" style="font-size: x-small;"></h4>
                             </div>
                         </div>
                     </div>
                 </a>
-            </div> -->
+            </div>
 
     </section>
 </div>

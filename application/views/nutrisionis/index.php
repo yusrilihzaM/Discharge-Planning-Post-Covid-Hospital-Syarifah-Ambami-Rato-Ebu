@@ -18,17 +18,17 @@
         </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <a href="<?= base_url('Nutrisionis/inputmenudiet');?>">
+                <a href="<?= base_url('Viewpatient');?>">
                     <div class="card card-statistic-1">
                             <div class="card-icon bg-success">
                                 <i class="fas fa-utensils"></i>
                             </div>
                             <div class="card-wrap">
                                 <div class="card-header">
-                                    <h4 mx-auto w-100 style="color: black;">Menu Diet</h4>
+                                    <h4 mx-auto w-100 style="color: black;">Lihat Menu Diet Pasien</h4>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="mt-2" style="font-size: x-small;">Makanan harian yang anda konsumsi</h4>
+                                    <h4 class="mt-2" style="font-size: x-small;">Makanan harian yang di konsumsi konsumsi</h4>
                                 </div>
                             </div>
                     </div>

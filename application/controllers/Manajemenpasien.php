@@ -168,5 +168,26 @@ class Manajemenpasien extends CI_Controller {
         $url="Manajemenpasien";
 		redirect($url);
 	}
+
+    public function detail(){
+        
+        $season_user=$this->session->userdata('id_user');
+        $season_patient=$this->session->userdata('id_patient');
+        if($season_user){
+            $data['user'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array();
+            $data['name'] = $this->db->get_where('m_user', ['id_user' => $season_user])->row_array()["name"];
+        }
+        elseif($season_patient){
+            $data['user'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array();
+            $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
+        }
+        $data['data'] = $this->Pasien_model->get_pasien();
+        $data['title'] = 'Detail Pasien';
+        $this->load->view('templates/user/header', $data); 
+		$this->load->view('templates/user/navbar', $data); 	
+        $this->load->view('templates/user/left_menu', $data); 	
+        $this->load->view('manajemenpasien/detailpasien', $data); 
+        $this->load->view('templates/user/footer', $data);
+    }
 }
 
