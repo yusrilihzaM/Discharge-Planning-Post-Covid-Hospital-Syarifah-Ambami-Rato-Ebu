@@ -27,7 +27,7 @@ class Profil extends CI_Controller {
         }
         elseif($season_patient){
             $data['user'] = $this->db->query("Select * FROM m_patient natural join role where id_patient=$season_patient")->row_array();
-           
+        
             $data['name'] = $this->db->get_where('m_patient', ['id_patient' => $season_patient])->row_array()["name_patient"];
             $data['role'] = $data['user']["role"];
             $data['age'] = $data['user']["age_patient"];
@@ -66,8 +66,8 @@ class Profil extends CI_Controller {
 
 
         $this->form_validation->set_rules('password_lama', 'Password lama', 'required|trim');
-        $this->form_validation->set_rules('password_baru1', 'Password baru', 'required|trim|min_length[6]');
-        $this->form_validation->set_rules('password_baru2', 'Ulangi password baru', 'required|trim|min_length[6]');
+        $this->form_validation->set_rules('password_baru1', 'Password baru', 'required|trim|min_length[5]');
+        $this->form_validation->set_rules('password_baru2', 'Ulangi password baru', 'required|trim|min_length[5]');
 
         if ($this->form_validation->run() == false)
         {

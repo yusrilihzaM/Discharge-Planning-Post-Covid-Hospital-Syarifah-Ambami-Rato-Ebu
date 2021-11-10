@@ -75,20 +75,14 @@
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 content">
                     <h3 class="font-bold">Tentang RSUD Syarifah Ambami Rato Ebu</h3>
-                    <p class="font-italic">
-                        RSUD Syarifah Ambami Rato Ebu Bangkalan merupakan
-                        salah satu rumah sakit yang memberikan Discharge Planning bagi pasien rawat inap.RSUD Syam
-                        Rabu berusaha memberikan pelayanan kesehatan secara
-                        profesionalisme dan meningkatkan mutu terus-menerus. Sehingga memaksa pihak
-                        RSUD Syam Rabu untuk selalu memperbaiki kinerjanya, agar dapat menambah
-                        kepercayaan masyarakat. Kepercayaan ini sangatlah penting, mengingat
-                        masyarakat merupakan pengguna jasanya. Diharapkan dengan peningkatan
-                        kepercayaan masyarakat terhadap RSUD Syam Rabu mempunyai dampak pada
-                        Visi RSUD Syam Rabu, yaitu menjadi rumah sakit sentra rujukan sepulau
-                        madura. Untuk mencapai visi tersebut RSUD Syam Rabu menetapkan Misi
-                        RSUD Syam Rabu sebagai berikut : Meningkatkan pelayanan kesehatan yang
-                        paripurna, bermutu dan profesional pada seluruh lapisan masyarakat.
-                        Meningkatkan cakupan dan jangkauan pelayanan kesehatan. Meningkatkan
+                    <p class="font-italic" style="text-align: center;">
+                        RSUD Syarifah Ambami Rato Ebu Bangkalan merupakan salah satu rumah sakit yang memberikan Discharge Planning 
+                        bagi pasien rawat inap. RSUD Syamrabu berusaha memberikan pelayanan kesehatan secara profesionalisme dan meningkatkan 
+                        mutu terus-menerus. Sehingga memaksa pihak RSUD Syam Rabu untuk selalu memperbaiki kinerjanya, agar dapat menambah
+                        kepercayaan masyarakat. Kepercayaan ini sangatlah penting, mengingat masyarakat merupakan pengguna jasanya. Diharapkan dengan peningkatan
+                        kepercayaan masyarakat terhadap RSUD Syam Rabu mempunyai dampak pada Visi RSUD Syam Rabu, yaitu menjadi rumah sakit sentra rujukan sepulau
+                        madura. Untuk mencapai visi tersebut RSUD Syam Rabu menetapkan Misi RSUD Syamrabu sebagai berikut : Meningkatkan pelayanan kesehatan yang
+                        paripurna, bermutu dan profesional pada seluruh lapisan masyarakat. Meningkatkan cakupan dan jangkauan pelayanan kesehatan. Meningkatkan
                         pelayanan administrasi dan manajemen rumah sakit.
                     </p>
                 </div>
@@ -112,7 +106,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-ambulance-cross"></i></div>
-                        <h4><a href="">Ambulan</a></h4>
+                        <h4></a>Ambulan</h4>
+                        <!-- <a href=""> -->
                         <p>Ambulan merupakan alat transportasi medis di RSUD Syamrabu Bangkalan</p>
                     </div>
                 </div>
@@ -120,7 +115,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-first-aid"></i></i></div>
-                        <h4><a href="">Apotek</a></h4>
+                        <h4>Apotek</a></h4>
+                        <!-- <a href=""> -->
                         <p>RSUD Syamrabu bangkalan juga menyediakan Apotek sebagai tempat untuk menebus resep obat
                             dari dokter</p>
                     </div>
@@ -129,7 +125,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-dna"></i></i></div>
-                        <h4><a href="">Radiologi</a></h4>
+                        <h4>Radiologi</a></h4>
+                        <!-- <a href=""> -->
                         <p>RSUD Syamrabu juga menyediakan ruangan radiologi untuk pasien</p>
                     </div>
                 </div>
@@ -137,7 +134,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-laboratory"></i></i></i></div>
-                        <h4><a href="">Laboratorium</a></h4>
+                        <h4>Laboratorium</a></h4>
+                        <!-- <a href=""> -->
                         <p>RSUD Syamrabu menyediakan ruangan laboratorium</p>
                     </div>
                 </div>
@@ -145,7 +143,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-patient-bed"></i></i></div>
-                        <h4><a href="">Ruang UGD</a></h4>
+                        <h4>Ruang UGD</a></h4>
+                        <!-- <a href=""> -->
                         <p>Ruang Unit Gawat Darurat juga tersedia bagi pasien yang membutuhkan perawatan khusus</p>
                     </div>
                 </div>
@@ -153,7 +152,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-hospital"></i></i></div>
-                        <h4><a href="">Rawat Inap</a></h4>
+                        <h4>Rawat Inap</a></h4>
+                        <!-- <a href=""> -->
                         <p>Ruang Rawat Inap tersedia untuk pasien melakukan opname</p>
                     </div>
                 </div>
@@ -177,7 +177,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-bank-transfer"></i></div>
-                        <h4><a href="">Bank/ATM</a></h4>
+                        <h4>Bank/ATM</a></h4>
+                        <!-- <a href=""> -->
                         <p>Tersedia ATM Center di area RSUD Syamrabu Bangkalan</p>
                     </div>
                 </div>
@@ -185,7 +186,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-bed"></i></div>
-                        <h4><a href="">Ruang Tunggu</a></h4>
+                        <h4>Ruang Tunggu</a></h4>
+                        <!-- <a href=""> -->
                         <p>Tersedia ruang tunggu untuk keluarga pasien</p>
                     </div>
                 </div>
@@ -193,7 +195,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-lunch"></i></div>
-                        <h4><a href="">Kafe/Kantin</a></h4>
+                        <h4>Kafe/Kantin</a></h4>
+                        <!-- <a href=""> -->
                         <p>RSUD Syamrabu juga menyediakan kantin umum bagi pasien beserta keluara maupun untuk
                             pengunjung umum RSUD Syamrabu</p>
                     </div>
@@ -202,7 +205,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-bicycle"></i></div>
-                        <h4><a href="">Parkir</a></h4>
+                        <h4>Parkir</a></h4>
+                        <!-- <a href=""> -->
                         <p>Tersedia tempat parkir luas bagi sepeda motor dan mobil</p>
                     </div>
                 </div>
@@ -210,7 +214,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
                         <div class="icon"><i class="icofont-wall-clock"></i></div>
-                        <h4><a href="">Layanan 24 Jam</a></h4>
+                        <h4>Layanan 24 Jam</a></h4>
+                        <!-- <a href=""> -->
                         <p>Unit Pelayanan 24 juga tersedia bagi pasien</p>
                     </div>
                 </div>
@@ -218,7 +223,8 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
                     <div class="icon-box">
                         <div class="icon"><i class="bx bx-arch"></i></div>
-                        <h4><a href="">Musholla</a></h4>
+                        <h4>Musholla</a></h4>
+                        <!-- <a href=""> -->
                         <p>RSUD Syamrabu Bangkalan juga menyediakan tempat ibadah bagi pengunjung umum maupun pasien
                             RSUD</p>
                     </div>

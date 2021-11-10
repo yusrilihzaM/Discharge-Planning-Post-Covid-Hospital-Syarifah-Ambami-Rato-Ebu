@@ -49,11 +49,11 @@
                                 </div>
                                 <div class="card-body">
 
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-lg-6">
                                             <?= $this->session->flashdata('message');?>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                         <div class="form-group row align-items-center">
                                             <label for="password_lama" class="form-control-label col-sm-3 text-md-right">Password
@@ -61,7 +61,6 @@
                                                 <div class="col-sm-6 col-md-9">
                                                     <input type="password" class="form-control" name="password_lama" id="password_lama"
                                                         placeholder="Password lama" tabindex="1" required autofocus> 
-                                                    
                                                     <div class="invalid-feedback">
                                                         Silahkan isi password lama anda
                                                 </div>
@@ -74,7 +73,6 @@
                                             <div class="col-sm-6 col-md-9">
                                                 <input type="password" name="password_baru1" class="form-control"
                                                     id="password_baru1" placeholder="Password baru" tabindex="1" required autofocus>
-                                                
                                                 <div class="invalid-feedback">
                                                     Silahkan isi password baru anda
                                                 </div>
@@ -86,7 +84,6 @@
                                             <div class="col-sm-6 col-md-9">
                                                 <input type="password" name="password_baru2" class="form-control" id="password_baru2"
                                                     placeholder="Ulangi password baru" tabindex="1" required autofocus>
-                                                
                                                 <div class="invalid-feedback">
                                                     Silahkan isi ulangi password baru anda
                                                 </div>

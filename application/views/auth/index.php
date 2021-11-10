@@ -67,7 +67,7 @@
                         </form>
 
                         <div class="text-center mt-5 text-small">
-                            Copyright 2021 &copy; Universitas Trunojoyo Madura
+                            Copyright &copy; RSUD Syarifah Ambami Rato Ebu Bangkalan 2021 
                         </div>
                     </div>
                 </div>
