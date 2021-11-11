@@ -110,9 +110,10 @@ class Profil extends CI_Controller {
                     $this->db->where('id_patient', $season_patient);
                     $this->db->update('m_patient');         
                     }
-
-                    $this->session->set_flashdata('message', '<div class="alert alert-sucsess" role="alert"> Password berhasil diubah!</div>');
-                    redirect('profil/password');
+                       $this->session->set_flashdata('flash', 'Diubah');
+		$this->session->set_flashdata('data', 'Password');
+                    $this->session->set_flashdata('message', '<div class="alert alert-sucsess" style="background-color: green;" role="alert"> Password berhasil diubah!</div>');
+                    redirect('profil');
                 }
             }
         }

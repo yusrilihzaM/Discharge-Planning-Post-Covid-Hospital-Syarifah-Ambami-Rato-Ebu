@@ -28,6 +28,13 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <?= $this->session->flashdata('Message'); ?>
+                            </div>
+                        </div>
+
                         <div class="card">
                             <div class="card-body">
                                 <ul class="nav nav-pills flex-column">

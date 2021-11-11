@@ -30,7 +30,7 @@
                                 <h4 mx-auto w-100 style="color: black;">Manajemen Pasien</h4>
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;"></h4>
+                                <h4 class="mt-2" style="font-size: x-small;">Melihat detail data diri pasien</h4>
                             </div>
                             
                         </div>
@@ -52,7 +52,7 @@
 
                             </div>
                             <div class="card-body">
-                                <h4 class="mt-2" style="font-size: x-small;"></h4>
+                                <h4 class="mt-2" style="font-size: x-small;">Melihat data pasien secara lengkap meliputi kegiatan yang dilakukan, obat, menu diet pasien</h4>
                             </div>
                         </div>
                     </div>

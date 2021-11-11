@@ -1,5 +1,10 @@
 <div class="main-content">
     <section class="section">
+          <div class="flash-data-news" data-flashdata="<?= $this->session->flashdata('flash') ?>">
+
+        </div>
+        <div class="flash-data-data" data-flashdata="<?= $this->session->flashdata('data') ?>">
+        </div>
         <div class="section-header">
 
             <h1>Akun</h1>
@@ -41,6 +46,11 @@
                 </div>
                 <div class="col-md-8">
                     <form id="setting-form">
+                         <div class="row">
+                            <div class="col-lg-6">
+                                <?= $this->session->flashdata('Message'); ?>
+                            </div>
+                        </div>
                         <div class="card" id="settings-card">
                             <div class="card-header">
                                 <h4>Profil</h4>
