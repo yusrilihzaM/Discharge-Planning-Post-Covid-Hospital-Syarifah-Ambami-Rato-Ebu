@@ -62,6 +62,7 @@ class Worker extends CI_Controller {
         }
 	}
 
+    
     public function logout() // tugasnya mengembalikan login
     {
 

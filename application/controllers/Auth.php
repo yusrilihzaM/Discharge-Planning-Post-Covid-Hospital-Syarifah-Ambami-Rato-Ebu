@@ -47,7 +47,8 @@ class Auth extends CI_Controller {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akunmu belum melakukan deteksi mandiri</div>');
                 redirect('auth');
             }
-        } else {
+        } 
+        else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Akun tidak ada</div>');
             redirect('auth');
         }
