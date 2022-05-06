@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 order-lg-2 order-1 min-vh-100 background-walk-y position-relative overlay-gradient-bottom"
-                    data-background="https://bpws.go.id/media/k2/items/cache/eb800d55c6f0176e166b1567b2249535_XL.jpg">
+                    data-background="https://www.goodnewsfromindonesia.id/uploads/post/large-goodnewsfromindonesia-gnfi-jembatan-suramadu-3e337eea29ef971960c49092e542b533.jpg">
                     <div class="absolute-bottom-left index-2">
                         <div class="text-light p-5 pb-2">
                             <div class="mb-5 pb-3">
